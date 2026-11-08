@@ -56,6 +56,27 @@ export const categories: Category[] = [
     toolExamples: 'Make, Zapier, Fathom, Relay.app',
     articleCount: 0,
   },
+  {
+    name: 'Email Marketing',
+    slug: 'email-marketing',
+    description: 'Newsletter platforms, automated drip sequences, and subscriber segmentation built for creators and small businesses.',
+    toolExamples: 'Kit (ConvertKit), Beehiiv, MailerLite, ActiveCampaign',
+    articleCount: 0,
+  },
+  {
+    name: 'Online Courses',
+    slug: 'online-courses',
+    description: 'Course hosting platforms, cohort learning spaces, and membership communities to package and teach your expertise.',
+    toolExamples: 'Teachable, Thinkific, Kajabi, Podia',
+    articleCount: 0,
+  },
+  {
+    name: 'Digital Products',
+    slug: 'digital-products',
+    description: 'Frictionless checkouts, digital download storefronts, and licensing tools for selling templates, guides, and software.',
+    toolExamples: 'Gumroad, Lemon Squeezy, Stan Store, Payhip',
+    articleCount: 0,
+  },
 ];
 
 export const articles: ArticleMeta[] = [

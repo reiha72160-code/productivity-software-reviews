@@ -1,4 +1,6 @@
 ---
+import { categories } from '../data/articles';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -17,11 +19,9 @@ const currentYear = new Date().getFullYear();
     <div class="footer-col">
       <h4>Categories</h4>
       <ul>
-        <li><a href="/blog?category=project-management">Project Management</a></li>
-        <li><a href="/blog?category=note-taking-docs">Note-Taking &amp; Docs</a></li>
-        <li><a href="/blog?category=time-tracking-billing">Time Tracking &amp; Billing</a></li>
-        <li><a href="/blog?category=crm-client-portals">CRM &amp; Client Portals</a></li>
-        <li><a href="/blog?category=automation-ai">Automation &amp; AI Workflows</a></li>
+        {categories.map((cat) => (
+          <li><a href={`/blog?category=${cat.slug}`}>{cat.name}</a></li>
+        ))}
       </ul>
     </div>
 
