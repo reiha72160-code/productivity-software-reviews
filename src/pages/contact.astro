@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Get in touch with the editorial team at Productivity Software Reviews to suggest a tool for review, report a pricing update, or ask a question."
+>
+  <div class="prose-container">
+    <header class="page-header">
+      <span class="badge">Get in Touch</span>
+      <h1>Contact Our Editorial Team</h1>
+      <p class="subtitle">
+        Have a question about a software comparison, spotted a recent SaaS pricing change, or want to suggest a tool for our next benchmark? We read every message.
+      </p>
+    </header>
+
+    <div class="contact-layout">
+      <div class="contact-card card">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form" action="#" method="get" onsubmit="event.preventDefault(); document.getElementById('form-feedback').hidden = false;">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="question">Reader Question / Software Advice</option>
+              <option value="review-request">Suggest a SaaS Tool for Review</option>
+              <option value="correction">Report a Pricing or Feature Update</option>
+              <option value="partnership">Media or Partnership Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your team size and what you're looking for..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+
+          <p id="form-feedback" class="form-feedback" hidden role="status">
+            Thank you for your message! Because this is a static site template, connect this form to your preferred form endpoint (such as Formspree, Basin, or Cloudflare Pages Functions) or reach out via direct email below.
+          </p>
+        </form>
+      </div>
+
+      <div class="contact-direct">
+        <div class="card direct-box">
+          <h3>Direct Email Contacts</h3>
+          <ul class="email-list">
+            <li>
+              <strong>Editorial &amp; Reader Questions:</strong><br />
+              <a href="mailto:editorial@productivitysoftwarereviews.example.com">
+                editorial@productivitysoftwarereviews.example.com
+              </a>
+            </li>
+            <li>
+              <strong>Corrections &amp; Fact-Checking:</strong><br />
+              <a href="mailto:corrections@productivitysoftwarereviews.example.com">
+                corrections@productivitysoftwarereviews.example.com
+              </a>
+            </li>
+            <li>
+              <strong>Partnerships &amp; Press:</strong><br />
+              <a href="mailto:partnerships@productivitysoftwarereviews.example.com">
+                partnerships@productivitysoftwarereviews.example.com
+              </a>
+            </li>
+          </ul>
+          <p class="response-note">
+            Typical response time: Within 1–2 business days (Monday–Friday).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .contact-card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans);
+    font-size: 0.96rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid var(--accent-primary);
+    border-color: transparent;
+    background-color: var(--bg-surface);
+  }
+
+  .form-feedback {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0.85rem 1rem;
+    background-color: var(--bg-accent-subtle);
+    border: 1px solid #A7F3D0;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+  }
+
+  .direct-box h3 {
+    margin-top: 0;
+    font-family: var(--font-serif);
+  }
+
+  .email-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+  }
+
+  .email-list li {
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+    word-break: break-word;
+  }
+
+  .response-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

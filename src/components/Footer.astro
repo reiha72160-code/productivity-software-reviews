@@ -1,0 +1,136 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Productivity Software Reviews</a>
+      <p class="footer-desc">
+        Unbiased, hands-on reviews and practical comparisons of modern productivity SaaS tools for small business owners, solo founders, and independent creators.
+      </p>
+      <p class="footer-disclosure-note">
+        <strong>Reader Disclosure:</strong> Some links on this site are affiliate links. If you purchase a subscription through them, we may earn a commission at no additional cost to you. Our editorial verdicts are never for sale.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="/blog?category=project-management">Project Management</a></li>
+        <li><a href="/blog?category=note-taking-docs">Note-Taking &amp; Docs</a></li>
+        <li><a href="/blog?category=time-tracking-billing">Time Tracking &amp; Billing</a></li>
+        <li><a href="/blog?category=crm-client-portals">CRM &amp; Client Portals</a></li>
+        <li><a href="/blog?category=automation-ai">Automation &amp; AI Workflows</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company &amp; Policies</h4>
+      <ul>
+        <li><a href="/about">About &amp; Testing Methodology</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>&copy; {currentYear} Productivity Software Reviews. All rights reserved.</span>
+    <span>Built for fast, accessible reading.</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--bg-navy);
+    color: #CBD5E1;
+    margin-top: 5rem;
+    padding: 4rem 0 2rem;
+    font-size: 0.92rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #1E293B;
+  }
+
+  .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-desc {
+    color: #94A3B8;
+    font-size: 0.94rem;
+    max-width: 440px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-disclosure-note {
+    background-color: #1E293B;
+    border-left: 3px solid #10B981;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    color: #CBD5E1;
+    font-size: 0.82rem;
+    margin-bottom: 0;
+    max-width: 460px;
+  }
+
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col li {
+    margin-bottom: 0.6rem;
+    font-size: 0.92rem;
+  }
+
+  .footer-col a {
+    color: #94A3B8;
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748B;
+    font-size: 0.84rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

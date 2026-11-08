@@ -1,0 +1,213 @@
+---
+export interface ComparisonRow {
+  name: string;
+  badge?: string;
+  bestFor: string;
+  startingPrice: string;
+  freePlan: string;
+  standoutFeature: string;
+  rating: number;
+  ctaUrl: string;
+}
+
+export interface Props {
+  caption?: string;
+  rows: ComparisonRow[];
+}
+
+const {
+  caption = 'Quick Comparison of Top-Rated Tools',
+  rows,
+} = Astro.props;
+---
+
+<div class="comparison-section" id="comparison-table">
+  <div class="table-header-bar">
+    <h3 class="table-caption">{caption}</h3>
+    <span class="scroll-hint">Swipe horizontally on mobile &rarr;</span>
+  </div>
+
+  <div class="table-scroll-container" role="region" aria-label={caption} tabindex="0">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th scope="col">Software</th>
+          <th scope="col">Best For</th>
+          <th scope="col">Starting Price</th>
+          <th scope="col">Free Plan</th>
+          <th scope="col">Standout Strength</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, idx) => (
+          <tr class:list={[{ featured: idx === 0 || Boolean(row.badge) }]}>
+            <td class="col-tool">
+              <div class="tool-cell">
+                {row.badge && <span class="pick-badge">{row.badge}</span>}
+                <strong class="tool-name">{row.name}</strong>
+              </div>
+            </td>
+            <td>{row.bestFor}</td>
+            <td class="col-price"><strong>{row.startingPrice}</strong></td>
+            <td>{row.freePlan}</td>
+            <td>{row.standoutFeature}</td>
+            <td class="col-rating">
+              <span class="score">{row.rating.toFixed(1)}</span>
+              <span class="out-of">/ 5</span>
+            </td>
+            <td class="col-action">
+              <a href={row.ctaUrl} class="table-btn" rel="nofollow sponsored">
+                View &rarr;
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .comparison-section {
+    margin: 2.25rem 0;
+  }
+
+  .table-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .table-caption {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+  }
+
+  .scroll-hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: none;
+  }
+
+  .table-scroll-container {
+    overflow-x: auto;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .comparison-table th {
+    background-color: var(--bg-navy);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    vertical-align: middle;
+    line-height: 1.45;
+  }
+
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .comparison-table tbody tr.featured {
+    background-color: #F0FDF4;
+  }
+
+  .comparison-table tbody tr:hover {
+    background-color: var(--bg-primary);
+  }
+
+  .tool-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .pick-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .tool-name {
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .col-price strong {
+    color: var(--text-primary);
+  }
+
+  .col-rating {
+    white-space: nowrap;
+  }
+
+  .score {
+    font-weight: 700;
+    color: var(--text-primary);
+    background-color: #FEF3C7;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    border: 1px solid #FDE68A;
+  }
+
+  .out-of {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-left: 0.15rem;
+  }
+
+  .table-btn {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.84rem;
+    white-space: nowrap;
+  }
+
+  .table-btn:hover {
+    background-color: var(--accent-primary-hover);
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 768px) {
+    .scroll-hint {
+      display: inline-block;
+    }
+  }
+</style>

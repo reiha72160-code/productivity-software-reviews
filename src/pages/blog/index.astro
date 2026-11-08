@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles, categories } from '../../data/articles';
+---
+
+<BaseLayout
+  title="All SaaS Reviews & Comparisons"
+  description="Browse all hands-on productivity software reviews, head-to-head comparisons, and buying guides for small businesses and creators."
+>
+  <div class="container">
+    <header class="page-header">
+      <span class="badge">Editorial Archive</span>
+      <h1>Software Reviews &amp; Buying Guides</h1>
+      <p class="subtitle">
+        Every guide includes side-by-side comparison tables, real-world pros and cons, and clear "Best For" recommendations so you can pick the right tool fast.
+      </p>
+    </header>
+
+    <!-- Category Filter Bar -->
+    <nav class="category-filter-bar" aria-label="Filter reviews by category">
+      <button class="filter-chip active" data-category="all" type="button">
+        All Reviews ({articles.length})
+      </button>
+      {categories.map((cat) => (
+        <button class="filter-chip" data-category={cat.slug} type="button">
+          {cat.name}
+        </button>
+      ))}
+    </nav>
+
+    <!-- Articles Grid -->
+    <div class="blog-grid" id="articles-container">
+      {articles.map((article) => (
+        <div class="article-item" data-category={article.categorySlug}>
+          <ArticleCard article={article} />
+        </div>
+      ))}
+    </div>
+
+    <div id="empty-category-state" class="empty-state card" hidden>
+      <h3>New reviews in this category are currently in testing</h3>
+      <p>
+        We are completing our 60-day hands-on benchmark for this category. In the meantime, check out our flagship workspace comparison below.
+      </p>
+      <a href="/blog/notion-vs-clickup-vs-asana-small-business" class="btn btn-primary">
+        Read Notion vs. ClickUp vs. Asana &rarr;
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+  const items = document.querySelectorAll<HTMLElement>('.article-item');
+  const emptyState = document.getElementById('empty-category-state');
+
+  function applyFilter(category: string) {
+    let visibleCount = 0;
+
+    chips.forEach((chip) => {
+      const isMatch = chip.dataset.category === category;
+      chip.classList.toggle('active', isMatch);
+    });
+
+    items.forEach((item) => {
+      const matches = category === 'all' || item.dataset.category === category;
+      item.style.display = matches ? '' : 'none';
+      if (matches) visibleCount++;
+    });
+
+    if (emptyState) {
+      emptyState.hidden = visibleCount > 0;
+    }
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const cat = chip.dataset.category || 'all';
+      const url = new URL(window.location.href);
+      if (cat === 'all') {
+        url.searchParams.delete('category');
+      } else {
+        url.searchParams.set('category', cat);
+      }
+      window.history.replaceState({}, '', url);
+      applyFilter(cat);
+    });
+  });
+
+  // Initialize from URL query string if present
+  const params = new URLSearchParams(window.location.search);
+  const initialCat = params.get('category');
+  if (initialCat) {
+    applyFilter(initialCat);
+  }
+</script>
+
+<style>
+  .page-header h1 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .category-filter-bar {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+  }
+
+  .filter-chip {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+
+  .filter-chip.active {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #FFFFFF;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    max-width: 580px;
+    margin: 1rem auto 0;
+  }
+
+  .empty-state h3 {
+    margin-top: 0;
+    font-family: var(--font-serif);
+  }
+
+  @media (max-width: 640px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

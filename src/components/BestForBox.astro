@@ -1,0 +1,202 @@
+---
+export interface Props {
+  toolName: string;
+  tagline?: string;
+  rating: number;
+  bestFor: string;
+  notIdealFor?: string;
+  startingPrice: string;
+  freePlanAvailable?: boolean;
+  verdictSummary: string;
+  ctaUrl?: string;
+  ctaLabel?: string;
+}
+
+const {
+  toolName,
+  tagline,
+  rating,
+  bestFor,
+  notIdealFor,
+  startingPrice,
+  freePlanAvailable = true,
+  verdictSummary,
+  ctaUrl = '#comparison-table',
+  ctaLabel = `Check ${toolName} Pricing`,
+} = Astro.props;
+---
+
+<aside class="best-for-box" aria-label={`Verdict for ${toolName}`}>
+  <div class="verdict-ribbon">
+    <span class="ribbon-badge">Editor's Verdict</span>
+    <span class="rating-pill" aria-label={`Rating ${rating} out of 5`}>
+      <span class="star" aria-hidden="true">&#9733;</span>
+      <strong>{rating.toFixed(1)}</strong> / 5.0
+    </span>
+  </div>
+
+  <div class="verdict-header">
+    <div>
+      <h3 class="tool-title">{toolName}</h3>
+      {tagline && <p class="tool-tagline">{tagline}</p>}
+    </div>
+    {ctaUrl && (
+      <a href={ctaUrl} class="btn btn-primary verdict-cta" rel="nofollow sponsored">
+        {ctaLabel} &rarr;
+      </a>
+    )}
+  </div>
+
+  <div class="verdict-specs">
+    <div class="spec-item highlight">
+      <span class="spec-label">Best For</span>
+      <span class="spec-value">{bestFor}</span>
+    </div>
+    {notIdealFor && (
+      <div class="spec-item">
+        <span class="spec-label">Skip If</span>
+        <span class="spec-value">{notIdealFor}</span>
+      </div>
+    )}
+    <div class="spec-item">
+      <span class="spec-label">Starting Price</span>
+      <span class="spec-value">
+        {startingPrice}
+        {freePlanAvailable ? ' (Free tier available)' : ' (Paid plans only)'}
+      </span>
+    </div>
+  </div>
+
+  <div class="verdict-body">
+    <p class="verdict-text">
+      <strong>The Bottom Line:</strong> {verdictSummary}
+    </p>
+  </div>
+</aside>
+
+<style>
+  .best-for-box {
+    background-color: var(--bg-surface);
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-md);
+  }
+
+  .verdict-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.9rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .ribbon-badge {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+
+  .star {
+    color: #D97706;
+  }
+
+  .verdict-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+  }
+
+  .tool-title {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .tool-tagline {
+    margin: 0.2rem 0 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .verdict-cta {
+    white-space: nowrap;
+  }
+
+  .verdict-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: var(--bg-primary);
+    padding: 0.75rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+  }
+
+  .spec-item.highlight {
+    background-color: var(--bg-accent-subtle);
+    border-color: #A7F3D0;
+  }
+
+  .spec-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .spec-item.highlight .spec-label {
+    color: var(--accent-primary);
+  }
+
+  .spec-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .verdict-body {
+    padding-top: 1.1rem;
+  }
+
+  .verdict-text {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+</style>
