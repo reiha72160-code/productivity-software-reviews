@@ -26,12 +26,12 @@ const {
 } = Astro.props;
 ---
 
-<aside class="best-for-box" aria-label={`Verdict for ${toolName}`}>
+<aside class="best-for-box" aria-label={`Editorial Verdict for ${toolName}`}>
   <div class="verdict-ribbon">
-    <span class="ribbon-badge">Editor's Verdict</span>
-    <span class="rating-pill" aria-label={`Rating ${rating} out of 5`}>
+    <span class="ribbon-badge">Editorial Verdict</span>
+    <span class="rating-pill" aria-label={`Editorial Score ${rating} out of 5`}>
       <span class="star" aria-hidden="true">&#9733;</span>
-      <strong>{rating.toFixed(1)}</strong> / 5.0
+      <span>Editorial Score: <strong>{rating.toFixed(1)}</strong> / 5.0</span>
     </span>
   </div>
 
@@ -113,7 +113,7 @@ const {
     border: 1px solid #FDE68A;
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
   }
 
   .star {

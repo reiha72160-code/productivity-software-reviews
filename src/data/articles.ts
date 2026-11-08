@@ -13,7 +13,6 @@ export interface ArticleMeta {
   category: string;
   categorySlug: string;
   author: string;
-  authorRole: string;
   publishedDate: string;
   updatedDate: string;
   updatedDateFormatted: string;
@@ -63,11 +62,10 @@ export const articles: ArticleMeta[] = [
   {
     slug: 'notion-vs-clickup-vs-asana-small-business',
     title: 'Notion vs. ClickUp vs. Asana (2026): Which Workspace Actually Fits a Small Business?',
-    excerpt: 'We spent 60 days running real client deliverables, SOPs, and weekly sprints across Notion, ClickUp, and Asana. Here is our honest breakdown of setup costs, hidden friction, and which tool wins for teams under 25 people.',
+    excerpt: 'Based on hands-on time with free plans and trials, official documentation and pricing analysis, and aggregated user feedback, here is our breakdown of how Notion, ClickUp, and Asana compare for teams under 25 people.',
     category: 'Project Management',
     categorySlug: 'project-management',
-    author: 'Claire Vance',
-    authorRole: 'Lead Workflow Analyst',
+    author: 'Productivity Software Reviews Editorial Team',
     publishedDate: '2026-10-15',
     updatedDate: '2026-11-04',
     updatedDateFormatted: 'Nov 4, 2026',

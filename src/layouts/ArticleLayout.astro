@@ -9,8 +9,7 @@ export interface Props {
   description: string;
   category: string;
   categorySlug: string;
-  author: string;
-  authorRole?: string;
+  author?: string;
   publishedDate: string;
   updatedDate: string;
   updatedDateFormatted: string;
@@ -31,8 +30,7 @@ const {
   description,
   category,
   categorySlug,
-  author,
-  authorRole = 'Senior SaaS Reviewer',
+  author = 'Productivity Software Reviews Editorial Team',
   publishedDate,
   updatedDate,
   updatedDateFormatted,
@@ -61,7 +59,7 @@ const {
           <div class="meta-badges">
             <a href={`/blog?category=${categorySlug}`} class="badge">{category}</a>
             <span class="read-time">{readTime}</span>
-            <span class="fact-checked">&#10003; Hands-On Tested</span>
+            <span class="fact-checked">&#10003; Editorial Review</span>
           </div>
 
           <h1>{title}</h1>
@@ -69,11 +67,9 @@ const {
 
           <div class="byline-bar">
             <div class="author-block">
-              <div class="author-avatar" aria-hidden="true">
-                {author.split(' ').map((n) => n[0]).join('')}
-              </div>
+              <div class="author-avatar" aria-hidden="true">PSR</div>
               <div>
-                <div class="author-name">By <strong>{author}</strong> &middot; <span class="author-role">{authorRole}</span></div>
+                <div class="author-name">By <strong>{author}</strong></div>
                 <div class="date-meta">
                   Last updated <time datetime={updatedDate}>{updatedDateFormatted}</time>
                   <span class="sr-only">(Originally published {publishedDate})</span>
@@ -127,14 +123,14 @@ const {
         <div class="sidebar-card methodology-card">
           <h4>How We Evaluate SaaS</h4>
           <p>
-            Every tool featured on Productivity Software Reviews is tested in real small-business and creator workflows before we publish a verdict.
+            Our reviews are based on hands-on time with free plans and trials, official documentation and pricing, and aggregated user feedback.
           </p>
           <ul>
-            <li><strong>Real Account Testing:</strong> Minimum 14 days of active project usage.</li>
-            <li><strong>Pricing Clarity:</strong> We flag hidden add-ons, seat minimums, and renewal hikes.</li>
-            <li><strong>Zero Sponsored Rankings:</strong> Vendors cannot pay to alter ratings or "Best For" picks.</li>
+            <li><strong>Free Plans &amp; Trials:</strong> Exploring core interfaces and setup flows firsthand.</li>
+            <li><strong>Official Pricing &amp; Specs:</strong> Auditing seat limits, plan restrictions, and hidden add-ons.</li>
+            <li><strong>Aggregated User Feedback:</strong> Synthesizing public reviews and community sentiment.</li>
           </ul>
-          <a href="/about" class="methodology-link">Learn about our testing process &rarr;</a>
+          <a href="/about" class="methodology-link">Learn about our review process &rarr;</a>
         </div>
       </aside>
     </div>
@@ -224,17 +220,13 @@ const {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     flex-shrink: 0;
   }
 
   .author-name {
     font-size: 0.94rem;
     color: var(--text-primary);
-  }
-
-  .author-role {
-    color: var(--text-muted);
   }
 
   .date-meta {

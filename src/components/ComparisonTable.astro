@@ -36,7 +36,7 @@ const {
           <th scope="col">Starting Price</th>
           <th scope="col">Free Plan</th>
           <th scope="col">Standout Strength</th>
-          <th scope="col">Rating</th>
+          <th scope="col">Editorial Score*</th>
           <th scope="col">Details</th>
         </tr>
       </thead>
@@ -54,8 +54,11 @@ const {
             <td>{row.freePlan}</td>
             <td>{row.standoutFeature}</td>
             <td class="col-rating">
-              <span class="score">{row.rating.toFixed(1)}</span>
-              <span class="out-of">/ 5</span>
+              <div class="score-wrap">
+                <span class="score">{row.rating.toFixed(1)}</span>
+                <span class="out-of">/ 5</span>
+              </div>
+              <span class="score-sublabel">Editorial Score</span>
             </td>
             <td class="col-action">
               <a href={row.ctaUrl} class="table-btn" rel="nofollow sponsored">
@@ -67,6 +70,9 @@ const {
       </tbody>
     </table>
   </div>
+  <p class="table-footnote">
+    *<strong>Editorial Score:</strong> Rated out of 5.0 by the Productivity Software Reviews editorial team based on hands-on time with free plans and trials, official documentation and pricing value, and aggregated user feedback.
+  </p>
 </div>
 
 <style>
@@ -173,6 +179,11 @@ const {
     white-space: nowrap;
   }
 
+  .score-wrap {
+    display: flex;
+    align-items: baseline;
+  }
+
   .score {
     font-weight: 700;
     color: var(--text-primary);
@@ -186,6 +197,14 @@ const {
     color: var(--text-muted);
     font-size: 0.8rem;
     margin-left: 0.15rem;
+  }
+
+  .score-sublabel {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    font-weight: 500;
   }
 
   .table-btn {
@@ -203,6 +222,13 @@ const {
   .table-btn:hover {
     background-color: var(--accent-primary-hover);
     color: #FFFFFF;
+  }
+
+  .table-footnote {
+    margin: 0.6rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.45;
   }
 
   @media (max-width: 768px) {
