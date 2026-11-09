@@ -61,7 +61,7 @@ export const categories: Category[] = [
     slug: 'email-marketing',
     description: 'Newsletter platforms, automated drip sequences, and subscriber segmentation built for creators and small businesses.',
     toolExamples: 'Kit (ConvertKit), Beehiiv, MailerLite, ActiveCampaign',
-    articleCount: 0,
+    articleCount: 1,
   },
   {
     name: 'Online Courses',
@@ -80,6 +80,19 @@ export const categories: Category[] = [
 ];
 
 export const articles: ArticleMeta[] = [
+  {
+    slug: 'systeme-io-review',
+    title: 'Systeme.io Review (2026): The Free All-in-One That Replaces Your Tool Stack',
+    excerpt: 'Email, funnels, online courses, digital product checkout, a blog, and an affiliate program in one dashboard. Here is our breakdown of Systeme.io’s permanent free plan, pricing limits, and real user feedback.',
+    category: 'Email Marketing',
+    categorySlug: 'email-marketing',
+    author: 'Productivity Software Reviews Editorial Team',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-08',
+    updatedDateFormatted: 'Nov 8, 2026',
+    readTime: '6 min read',
+    featured: true,
+  },
   {
     slug: 'notion-vs-clickup-vs-asana-small-business',
     title: 'Notion vs. ClickUp vs. Asana (2026): Which Workspace Actually Fits a Small Business?',

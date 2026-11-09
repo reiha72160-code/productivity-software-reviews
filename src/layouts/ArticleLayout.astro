@@ -23,6 +23,7 @@ export interface Props {
     pros: string[];
     cons: string[];
   };
+  hideDefaultDisclosure?: boolean;
 }
 
 const {
@@ -40,6 +41,7 @@ const {
   comparisonRows,
   comparisonCaption,
   prosCons,
+  hideDefaultDisclosure = false,
 } = Astro.props;
 ---
 
@@ -83,9 +85,11 @@ const {
 
     <div class="container article-layout-grid">
       <div class="article-main">
-        <div class="affiliate-notice" role="note">
-          <strong>Transparency Note:</strong> Productivity Software Reviews is reader-supported. When you click on links to software tools on this page, we may earn a referral fee at no extra cost to you. Read our <a href="/affiliate-disclosure">full affiliate disclosure</a>.
-        </div>
+        {!hideDefaultDisclosure && (
+          <div class="affiliate-notice" role="note">
+            <strong>Transparency Note:</strong> Productivity Software Reviews is reader-supported. When you click on links to software tools on this page, we may earn a referral fee at no extra cost to you. Read our <a href="/affiliate-disclosure">full affiliate disclosure</a>.
+          </div>
+        )}
 
         {verdictBox && <BestForBox {...verdictBox} />}
 
@@ -252,7 +256,8 @@ const {
     align-items: start;
   }
 
-  .affiliate-notice {
+  .affiliate-notice,
+  .article-prose :global(.affiliate-notice) {
     background-color: var(--bg-subtle);
     border-left: 3px solid var(--border-strong);
     padding: 0.85rem 1.1rem;
@@ -261,6 +266,50 @@ const {
     color: var(--text-secondary);
     margin-bottom: 1.75rem;
     line-height: 1.5;
+  }
+
+  .article-prose :global(.data-table-wrapper) {
+    overflow-x: auto;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin: 1.5rem 0 2rem;
+  }
+
+  .article-prose :global(.data-table) {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .article-prose :global(.data-table th) {
+    background-color: var(--bg-navy);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .article-prose :global(.data-table td) {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    vertical-align: top;
+    line-height: 1.45;
+  }
+
+  .article-prose :global(.data-table tbody tr:last-child td) {
+    border-bottom: none;
+  }
+
+  .article-prose :global(.data-table tbody tr:hover) {
+    background-color: var(--bg-primary);
   }
 
   .article-prose :global(h2) {
