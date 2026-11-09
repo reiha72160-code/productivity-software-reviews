@@ -2,7 +2,8 @@
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import BestForBox from '../../components/BestForBox.astro';
 
-const affiliateUrl = 'https://systeme.io/?sa=sa02859084270bd353464c30d767d5af7f06091e23';
+const cta_link = 'https://systeme.io/?sa=sa02859084270bd353464c30d767d5af7f06091e23';
+const cta_label = 'Try Systeme.io Free';
 
 const toc = [
   { id: 'quick-verdict', label: 'Quick Verdict' },
@@ -27,6 +28,8 @@ const toc = [
   updatedDateFormatted="Nov 8, 2026"
   readTime="6 min read"
   toc={toc}
+  cta_link={cta_link}
+  cta_label={cta_label}
   hideDefaultDisclosure={true}
 >
   <div class="affiliate-notice" role="note">
@@ -44,8 +47,8 @@ const toc = [
     startingPrice="$0 Free plan (Paid plans from $17/mo)"
     freePlanAvailable={true}
     verdictSummary="Systeme.io is the strongest budget answer to a problem almost every new creator hits: paying for five separate tools before making a first sale. Email, funnels, online courses, digital product checkout, a blog, and even your own affiliate program live in one dashboard — and the free plan is genuinely usable, not a 14-day teaser. It is not the prettiest platform, and power users will find its ceiling. But if your current stack costs more than your revenue, this is the first tool to look at."
-    ctaUrl={affiliateUrl}
-    ctaLabel="Try Systeme.io free"
+    cta_link={cta_link}
+    cta_label={cta_label}
   />
 
   <h2 id="the-problem">The Problem: The "Tool Tax"</h2>
@@ -296,7 +299,7 @@ const toc = [
   </p>
 
   <div class="bottom-cta-wrap">
-    <a href={affiliateUrl} class="btn btn-primary bottom-cta-btn" rel="nofollow sponsored">
+    <a href={cta_link} class="btn btn-primary bottom-cta-btn" target="_blank" rel="sponsored nofollow">
       <strong>Try Systeme.io free &rarr;</strong>
     </a>
   </div>

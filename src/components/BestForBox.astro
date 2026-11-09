@@ -8,8 +8,8 @@ export interface Props {
   startingPrice: string;
   freePlanAvailable?: boolean;
   verdictSummary: string;
-  ctaUrl?: string;
-  ctaLabel?: string;
+  cta_link?: string;
+  cta_label?: string;
 }
 
 const {
@@ -21,66 +21,81 @@ const {
   startingPrice,
   freePlanAvailable = true,
   verdictSummary,
-  ctaUrl = '#comparison-table',
-  ctaLabel = `Check ${toolName} Pricing`,
+  cta_link,
+  cta_label,
 } = Astro.props;
+
+const buttonLabel = cta_label || `Try ${toolName}`;
 ---
 
-<aside class="best-for-box" aria-label={`Editorial Verdict for ${toolName}`}>
-  <div class="verdict-ribbon">
-    <span class="ribbon-badge">Editorial Verdict</span>
-    <span class="rating-pill" aria-label={`Editorial Score ${rating} out of 5`}>
-      <span class="star" aria-hidden="true">&#9733;</span>
-      <span>Editorial Score: <strong>{rating.toFixed(1)}</strong> / 5.0</span>
-    </span>
-  </div>
-
-  <div class="verdict-header">
-    <div>
-      <h3 class="tool-title">{toolName}</h3>
-      {tagline && <p class="tool-tagline">{tagline}</p>}
-    </div>
-    {ctaUrl && (
-      <a href={ctaUrl} class="btn btn-primary verdict-cta" rel="nofollow sponsored">
-        {ctaLabel} &rarr;
-      </a>
-    )}
-  </div>
-
-  <div class="verdict-specs">
-    <div class="spec-item highlight">
-      <span class="spec-label">Best For</span>
-      <span class="spec-value">{bestFor}</span>
-    </div>
-    {notIdealFor && (
-      <div class="spec-item">
-        <span class="spec-label">Skip If</span>
-        <span class="spec-value">{notIdealFor}</span>
-      </div>
-    )}
-    <div class="spec-item">
-      <span class="spec-label">Starting Price</span>
-      <span class="spec-value">
-        {startingPrice}
-        {freePlanAvailable ? ' (Free tier available)' : ' (Paid plans only)'}
+<div class="verdict-container">
+  <aside class="best-for-box" aria-label={`Editorial Verdict for ${toolName}`}>
+    <div class="verdict-ribbon">
+      <span class="ribbon-badge">Editorial Verdict</span>
+      <span class="rating-pill" aria-label={`Editorial Score ${rating} out of 5`}>
+        <span class="star" aria-hidden="true">&#9733;</span>
+        <span>Editorial Score: <strong>{rating.toFixed(1)}</strong> / 5.0</span>
       </span>
     </div>
-  </div>
 
-  <div class="verdict-body">
-    <p class="verdict-text">
-      <strong>The Bottom Line:</strong> {verdictSummary}
-    </p>
-  </div>
-</aside>
+    <div class="verdict-header">
+      <div>
+        <h3 class="tool-title">{toolName}</h3>
+        {tagline && <p class="tool-tagline">{tagline}</p>}
+      </div>
+    </div>
+
+    <div class="verdict-specs">
+      <div class="spec-item highlight">
+        <span class="spec-label">Best For</span>
+        <span class="spec-value">{bestFor}</span>
+      </div>
+      {notIdealFor && (
+        <div class="spec-item">
+          <span class="spec-label">Skip If</span>
+          <span class="spec-value">{notIdealFor}</span>
+        </div>
+      )}
+      <div class="spec-item">
+        <span class="spec-label">Starting Price</span>
+        <span class="spec-value">
+          {startingPrice}
+          {freePlanAvailable ? ' (Free tier available)' : ' (Paid plans only)'}
+        </span>
+      </div>
+    </div>
+
+    <div class="verdict-body">
+      <p class="verdict-text">
+        <strong>The Bottom Line:</strong> {verdictSummary}
+      </p>
+    </div>
+  </aside>
+
+  {cta_link && (
+    <div class="verdict-cta-after">
+      <a
+        href={cta_link}
+        class="btn btn-primary verdict-cta-btn"
+        target="_blank"
+        rel="sponsored nofollow"
+      >
+        {buttonLabel} &rarr;
+      </a>
+    </div>
+  )}
+</div>
 
 <style>
+  .verdict-container {
+    margin: 2rem 0;
+  }
+
   .best-for-box {
     background-color: var(--bg-surface);
     border: 2px solid var(--accent-primary);
     border-radius: var(--radius-md);
     padding: 1.5rem;
-    margin: 2rem 0;
     box-shadow: var(--shadow-md);
   }
 
@@ -121,13 +136,8 @@ const {
   }
 
   .verdict-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
     padding-bottom: 1.15rem;
     border-bottom: 1px solid var(--border-color);
-    flex-wrap: wrap;
   }
 
   .tool-title {
@@ -138,13 +148,9 @@ const {
   }
 
   .tool-tagline {
-    margin: 0.2rem 0 0;
+    margin: 0.25rem 0 0;
     font-size: 0.95rem;
     color: var(--text-muted);
-  }
-
-  .verdict-cta {
-    white-space: nowrap;
   }
 
   .verdict-specs {
@@ -198,5 +204,17 @@ const {
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
+  }
+
+  .verdict-cta-after {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .verdict-cta-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.98rem;
+    box-shadow: var(--shadow-sm);
   }
 </style>

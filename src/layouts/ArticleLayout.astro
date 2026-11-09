@@ -23,6 +23,8 @@ export interface Props {
     pros: string[];
     cons: string[];
   };
+  cta_link?: string;
+  cta_label?: string;
   hideDefaultDisclosure?: boolean;
 }
 
@@ -41,6 +43,8 @@ const {
   comparisonRows,
   comparisonCaption,
   prosCons,
+  cta_link,
+  cta_label,
   hideDefaultDisclosure = false,
 } = Astro.props;
 ---
@@ -91,7 +95,13 @@ const {
           </div>
         )}
 
-        {verdictBox && <BestForBox {...verdictBox} />}
+        {verdictBox && (
+          <BestForBox
+            {...verdictBox}
+            cta_link={verdictBox.cta_link ?? cta_link}
+            cta_label={verdictBox.cta_label ?? cta_label}
+          />
+        )}
 
         {comparisonRows && comparisonRows.length > 0 && (
           <ComparisonTable caption={comparisonCaption} rows={comparisonRows} />
