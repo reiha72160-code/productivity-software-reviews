@@ -61,7 +61,7 @@ export const categories: Category[] = [
     slug: 'email-marketing',
     description: 'Newsletter platforms, automated drip sequences, and subscriber segmentation built for creators and small businesses.',
     toolExamples: 'Kit (ConvertKit), Beehiiv, MailerLite, ActiveCampaign',
-    articleCount: 1,
+    articleCount: 2,
   },
   {
     name: 'Online Courses',
@@ -80,6 +80,19 @@ export const categories: Category[] = [
 ];
 
 export const articles: ArticleMeta[] = [
+  {
+    slug: 'best-email-marketing-for-beginners',
+    title: 'Best Email Marketing for Beginners (2026): Kit vs Beehiiv vs MailerLite vs ActiveCampaign, Honestly Compared',
+    excerpt: 'There is no single "best" beginner email tool — there are four tools built for four different first jobs. Here is how Kit, Beehiiv, MailerLite, and ActiveCampaign compare on free caps, automation paywalls, and real annual costs.',
+    category: 'Email Marketing',
+    categorySlug: 'email-marketing',
+    author: 'Productivity Software Reviews Editorial Team',
+    publishedDate: '2026-11-15',
+    updatedDate: '2026-11-15',
+    updatedDateFormatted: 'Nov 15, 2026',
+    readTime: '10 min read',
+    featured: true,
+  },
   {
     slug: 'systeme-io-review',
     title: 'Systeme.io Review (2026): The Free All-in-One That Replaces Your Tool Stack',

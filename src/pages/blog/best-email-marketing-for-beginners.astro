@@ -1,0 +1,827 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const cta_link = 'https://www.beehiiv.com/?via=hayato-tsuksgoshi';
+const cta_label = 'Try Beehiiv free';
+
+const beehiivUrl = 'https://www.beehiiv.com/?via=hayato-tsuksgoshi';
+const kitUrl = 'https://kit.com';
+const mailerLiteUrl = 'https://www.mailerlite.com';
+const activeCampaignUrl = 'https://www.activecampaign.com';
+const systemeAffiliateUrl = 'https://systeme.io/?sa=sa02859084270bd353464c30d767d5af7f06091e23';
+
+const toc = [
+  { id: 'quick-verdict', label: 'Quick Verdict' },
+  { id: 'the-problem', label: 'The Problem: Three Fears Every Beginner Has' },
+  { id: 'what-each-tool-is-for', label: 'What Each Tool Is Actually For' },
+  { id: 'comparison-table', label: 'The Comparison Table' },
+  { id: 'pricing-tool-by-tool', label: 'Pricing, Tool by Tool — With the Real Limits' },
+  { id: 'what-a-year-costs', label: 'What a Year Actually Costs (at 1,000 Subscribers)' },
+  { id: 'pros-and-cons', label: 'Pros & Cons' },
+  { id: 'who-should-use-each', label: "Who Should (and Shouldn't) Use Each" },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'bottom-line', label: 'Bottom Line' },
+];
+---
+
+<ArticleLayout
+  title="Best Email Marketing for Beginners (2026): Kit vs Beehiiv vs MailerLite vs ActiveCampaign, Honestly Compared"
+  description="There is no single 'best' beginner email tool — there are four tools built for four different first jobs. Here is how Kit, Beehiiv, MailerLite, and ActiveCampaign compare on free caps, automation paywalls, and real annual costs."
+  category="Email Marketing"
+  categorySlug="email-marketing"
+  author="Productivity Software Reviews Editorial Team"
+  publishedDate="2026-11-15"
+  updatedDate="2026-11-15"
+  updatedDateFormatted="Nov 15, 2026"
+  readTime="10 min read"
+  toc={toc}
+  cta_link={cta_link}
+  cta_label={cta_label}
+  hideDefaultDisclosure={true}
+>
+  <div class="affiliate-notice" role="note">
+    <strong>Transparency Note:</strong> This comparison is based on hands-on time with the free plans and trials these tools offer, a full audit of each platform's official pricing and documentation, and aggregated feedback from public user reviews and creator communities. If you sign up through links on this page, we may earn a commission at no extra cost to you. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.
+  </div>
+
+  <h2 id="quick-verdict">Quick Verdict</h2>
+
+  <div class="verdict-container">
+    <aside class="best-for-box" aria-label="Quick Verdict">
+      <div class="verdict-ribbon">
+        <span class="ribbon-badge">Editorial Verdict</span>
+        <span class="rating-pill">Ranked for True Beginners (2026)</span>
+      </div>
+
+      <p>
+        There is no single "best" beginner email tool — there are four tools built for four different first jobs, and picking by headline price is how beginners end up migrating in month three. Ranked for a true beginner (small or zero list, first product or first newsletter still ahead of you):
+      </p>
+
+      <div class="data-table-wrapper verdict-table-wrapper" role="region" aria-label="Quick Verdict Ranking" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Tool</th>
+              <th scope="col">Editorial Score</th>
+              <th scope="col">One-line verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href={kitUrl} target="_blank" rel="noopener noreferrer"><strong>Kit</strong></a> (formerly ConvertKit)</td>
+              <td><strong>4.3 / 5</strong></td>
+              <td>The creator default: a huge free runway, the best automation once you pay — but automation is exactly what you pay for.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer"><strong>MailerLite</strong></a></td>
+              <td><strong>4.2 / 5</strong></td>
+              <td>The budget start: cheapest paid step in the category and automations on the free plan — with the smallest free cap here.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href={beehiivUrl} target="_blank" rel="sponsored nofollow"><strong>Beehiiv</strong></a></td>
+              <td><strong>4.1 / 5</strong></td>
+              <td>The newsletter-as-a-business pick: built-in growth and 0% fees on paid subscriptions, at the steepest first paid step.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer"><strong>ActiveCampaign</strong></a></td>
+              <td><strong>3.8 / 5</strong></td>
+              <td>The power tool you graduate to: deepest automation, no free plan, and billing rules a beginner should read twice.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="verdict-summary-lines">
+        <p>
+          <strong>Best for:</strong> <a href={kitUrl} target="_blank" rel="noopener noreferrer">Kit</a> — creators who plan to sell digital products and run sequences. <a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer">MailerLite</a> — bloggers and small businesses who want automation today at the lowest possible price. <a href={beehiivUrl} target="_blank" rel="sponsored nofollow">Beehiiv</a> — writers whose newsletter itself is the product. <a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer">ActiveCampaign</a> — small businesses with leads, pipelines and behaviour-based automation from day one.
+        </p>
+        <p style="margin-bottom: 0;">
+          <strong>Not for:</strong> anyone who wants one tool to also host a course, funnels and checkout at $0 — that is a different shape of tool (see the Systeme.io note at the end).
+        </p>
+      </div>
+    </aside>
+
+    {cta_link && (
+      <div class="verdict-cta-after">
+        <a
+          href={cta_link}
+          class="btn btn-primary verdict-cta-btn"
+          target="_blank"
+          rel="sponsored nofollow"
+        >
+          {cta_label} &rarr;
+        </a>
+      </div>
+    )}
+  </div>
+
+  <h2 id="the-problem">The Problem: Three Fears Every Beginner Has (and Pricing Pages Make Worse)</h2>
+  <p>
+    Spend one evening in beginner email-marketing communities and the same three posts repeat:
+  </p>
+  <p>
+    <strong>1. "I have zero subscribers and I've spent a week comparing platforms."</strong> The choice feels permanent, so it gets over-researched. Plans get renamed, prices are quoted at different list sizes, and the feature that matters most — automation — is quietly paywalled on some tools and free on others. The real cost of choosing wrong is not the subscription. It is migration: rebuilding every form, landing page and welcome sequence in a new tool, three months in, when you should be publishing.
+  </p>
+  <p>
+    <strong>2. "Will my emails even reach the inbox?"</strong> New senders are haunted by the spam folder. Authentication settings (SPF, DKIM, DMARC), shared sending reputation on free plans, account-approval reviews — beginners cannot tell which of these are real risks and which are noise, and pricing pages do not help. The honest answer: all four tools here are established senders with solid infrastructure. What lands a beginner in spam is almost never the logo on the tool — it is a cold or purchased list, no domain authentication, and sending volume spikes. Any of these four beats any of these four plus a dirty list.
+  </p>
+  <p>
+    <strong>3. "Am I paying for subscribers I don't have?"</strong> Per-subscriber billing sounds fair until you read the counting rules. Some platforms bill for unsubscribed and bounced contacts. Prices step up the moment your list grows — success is taxed automatically, sometimes with an automatic card charge. And free plans have cliffs: cross the cap by one subscriber and sending locks until you upgrade or delete people. This is where beginners get hurt, and it is where this comparison spends most of its attention.
+  </p>
+
+  <h2 id="what-each-tool-is-for">What Each Tool Is Actually For</h2>
+  <div class="data-table-wrapper" role="region" aria-label="What Each Tool Is Actually For" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Job</th>
+          <th scope="col">Best fit here</th>
+          <th scope="col">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grow a list, then sell products with automated sequences</td>
+          <td><a href={kitUrl} target="_blank" rel="noopener noreferrer"><strong>Kit</strong></a></td>
+          <td>Tag-based automation and built-in commerce, built for creators</td>
+        </tr>
+        <tr>
+          <td>Start sending this week, with automations, at the lowest price</td>
+          <td><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer"><strong>MailerLite</strong></a></td>
+          <td>Automations on the free plan; cheapest paid step ($12/mo)</td>
+        </tr>
+        <tr>
+          <td>Run a newsletter as the product (paid subs, sponsors, growth)</td>
+          <td><a href={beehiivUrl} target="_blank" rel="sponsored nofollow"><strong>Beehiiv</strong></a></td>
+          <td>Recommendation network, ad network, 0% take on paid subscriptions</td>
+        </tr>
+        <tr>
+          <td>Automate a real sales pipeline (leads, CRM, behaviour triggers)</td>
+          <td><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer"><strong>ActiveCampaign</strong></a></td>
+          <td>Deepest automation builder of the four</td>
+        </tr>
+        <tr>
+          <td>Email + funnels + courses + checkout in one free account</td>
+          <td><a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Systeme.io</strong></a></td>
+          <td>All-in-one; covered in our <a href="/blog/systeme-io-review">Systeme.io review</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="comparison-table">The Comparison Table (verified 2026-11-10; re-verified 2026-11-15 — no changes)</h2>
+  <div class="data-table-wrapper" role="region" aria-label="The Comparison Table" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"><a href={kitUrl} target="_blank" rel="noopener noreferrer" class="th-link">Kit</a></th>
+          <th scope="col"><a href={beehiivUrl} target="_blank" rel="sponsored nofollow" class="th-link">Beehiiv</a></th>
+          <th scope="col"><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer" class="th-link">MailerLite</a></th>
+          <th scope="col"><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer" class="th-link">ActiveCampaign</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Free plan</strong></td>
+          <td>Yes — up to 10,000 subscribers</td>
+          <td>Yes — up to 2,500 subscribers</td>
+          <td>Yes — up to 250 subscribers</td>
+          <td><strong>No free plan</strong> (14-day trial)</td>
+        </tr>
+        <tr>
+          <td><strong>Sends on free</strong></td>
+          <td>Unlimited</td>
+          <td>Unlimited</td>
+          <td>2,500 / month</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Automations on free</strong></td>
+          <td>No — paid plans only</td>
+          <td>No — Lite and up</td>
+          <td><strong>Yes</strong></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>First paid plan</strong></td>
+          <td>Creator, $39/mo ($33/mo billed yearly) at 1,000 subs</td>
+          <td>Lite, $49/mo billed yearly ($59/mo monthly) at 1,000 subs</td>
+          <td>Comfort, from $12/mo ($10.80 billed yearly) at 500 subs</td>
+          <td>Starter, $15/mo billed yearly ($19/mo monthly) at 1,000 contacts</td>
+        </tr>
+        <tr>
+          <td><strong>Annual discount</strong></td>
+          <td>~17% (year = 10 × monthly)</td>
+          <td>Up to 20%</td>
+          <td>10%</td>
+          <td>~20%</td>
+        </tr>
+        <tr>
+          <td><strong>Seats on entry paid plan</strong></td>
+          <td>2 users</td>
+          <td>2 seats</td>
+          <td>3 seats</td>
+          <td>1 user</td>
+        </tr>
+        <tr>
+          <td><strong>Platform fee on your sales</strong></td>
+          <td>3.5% + 30¢ per sale (all plans, card processing included)</td>
+          <td>0% on paid subscriptions &amp; products (paid plans; Stripe fees still apply)</td>
+          <td>Sells digital products on paid plans; no extra platform cut advertised</td>
+          <td>No built-in commerce (integrates with stores)</td>
+        </tr>
+        <tr>
+          <td><strong>The catch</strong></td>
+          <td>Automation starts at $39/mo</td>
+          <td>Monetisation starts at $49/mo; branding removal needs Pro ($95/mo)</td>
+          <td>Free cap was cut to 250 in June 2026; sending locks if you pass it</td>
+          <td>New accounts (from Nov 2025) are billed for <strong>all</strong> contacts, including unsubscribed and bounced</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="pricing-tool-by-tool">Pricing, Tool by Tool — With the Real Limits</h2>
+
+  <h3><a href={kitUrl} target="_blank" rel="noopener noreferrer">Kit</a> — free for a long time, then a real jump</h3>
+  <p>
+    Kit's free plan is the most generous runway here: <strong>up to 10,000 subscribers</strong>, unlimited email sends, unlimited landing pages and forms, one user. What it withholds is the engine room — <strong>no automations and no email sequences on Free</strong>. The moment you want a welcome sequence (the first thing most creators actually need), you are on Creator: <strong>$39/mo billed monthly, or $390/year (about $33/mo) at 1,000 subscribers</strong>, rising with list size (at 10,000 subscribers Creator is $139/mo billed monthly). Pro ($79/mo at 1,000) adds engagement scoring, deliverability reporting and a newsletter referral system. Selling through Kit costs <strong>3.5% + 30¢ per sale on every plan</strong>, card processing included. Paid plans include a free white-glove migration from your old platform.
+  </p>
+  <p>
+    Fine print worth knowing: when your list crosses a tier, Kit <strong>automatically upgrades you</strong> — no sending interruption, but no asking first either. Cleaning your list back down does <strong>not</strong> auto-downgrade; you have to email support. There is a 30-day refund window from signup.
+  </p>
+
+  <h3><a href={beehiivUrl} target="_blank" rel="sponsored nofollow">Beehiiv</a> — free to publish, $49 to monetise</h3>
+  <p>
+    Beehiiv's free plan covers <strong>up to 2,500 subscribers with unlimited sends</strong>, a newsletter website, one publication, one seat, and access to its recommendation network — genuinely enough to start and grow a newsletter. The wall is money features: <strong>paid subscriptions, the ad network and automations start on Lite at $49/mo billed yearly ($59/mo monthly)</strong> at 1,000 subscribers, and removing beehiiv branding requires <strong>Pro at $95/mo billed yearly ($109 monthly)</strong>. On paid plans beehiiv takes <strong>0% of your paid subscription and product revenue</strong> — you keep everything except Stripe's standard 2.9% + $0.30.
+  </p>
+  <p>
+    Fine print worth knowing: beehiiv <strong>renamed and repriced every plan on October 1, 2026</strong> (Launch → Free, Scale → Lite, Max → Pro) and raised paid prices at every tier — any review written before October 2026 is quoting dead prices, including beehiiv's own older blog posts. Lite's price also climbs steeply with list size ($119/mo billed yearly at 10,000 subscribers).
+  </p>
+
+  <h3><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer">MailerLite</a> — the cheapest real start, with the smallest free room</h3>
+  <p>
+    MailerLite is the only tool here with <strong>automations on the free plan</strong>, and its paid step is the cheapest in this comparison: <strong>Comfort from $12/mo at 500 subscribers ($10.80/mo billed yearly — a flat 10% annual discount)</strong>. Comfort includes 3 seats and monthly sends of 10× your subscriber tier. <strong>Power, from $25/mo ($22.50 yearly)</strong>, removes the ceilings: unlimited sends, seats and automations, plus 24/7 live chat support.
+  </p>
+  <p>
+    Fine print worth knowing: the free plan shrank on <strong>June 16, 2026 — from 500 to 250 subscribers and from 12,000 to 2,500 emails a month</strong> (older reviews still quote the old limits). Pass 250 active subscribers on Free and <strong>sending locks</strong> for campaigns and automations until you upgrade or trim the list. MailerLite counts subscribers <strong>cumulatively within a billing cycle</strong>: someone you delete mid-cycle still counts until your billing date. On paid plans, crossing your tier <strong>automatically charges your card</strong> for the next one — convenient, and worth knowing before it happens.
+  </p>
+
+  <h3><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer">ActiveCampaign</a> — no free plan, and read the counting rules</h3>
+  <p>
+    ActiveCampaign is the automation heavyweight — and the only tool here with <strong>no free plan at all</strong>, just a 14-day trial. <strong>Starter is $15/mo billed yearly ($19/mo month-to-month) at 1,000 contacts</strong>, with sends capped at 10× your contact count, 1 user, and automations limited to <strong>5 actions each</strong>. Plus ($49/mo yearly) unlocks landing pages, the built-in CRM, lead scoring and more automation depth; Pro ($79/mo yearly) adds predictive sending and conditional content.
+  </p>
+  <p>
+    Fine print worth knowing — this is the section to read twice: accounts created on or after <strong>November 3, 2025 are billed for every contact in the account, including unsubscribed, bounced and unconfirmed contacts</strong>. You pay for people you cannot email. Prices also climb fast with list size: Starter is $149/mo at 10,000 contacts. None of this makes ActiveCampaign a bad tool — it makes it a tool to buy deliberately, when automation complexity is already your bottleneck, not a first experiment.
+  </p>
+
+  <h3>The free all-in-one alternative: <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow">Systeme.io</a></h3>
+  <p>
+    If your plan is "newsletter <strong>and</strong> a course <strong>and</strong> checkout", none of the four above bundles that — you would be stacking tools again. Systeme.io's free plan covers <strong>2,000 contacts with unlimited sends</strong>, plus funnels, one online course and checkout at <strong>0% platform transaction fees</strong>, in one dashboard. Its email automation is basic (one automation rule on Free) next to Kit or ActiveCampaign — that trade is the whole story. Full breakdown in our <a href="/blog/systeme-io-review">Systeme.io review</a>.
+  </p>
+
+  <h2 id="what-a-year-costs">What a Year Actually Costs (at 1,000 subscribers, billed yearly)</h2>
+  <div class="data-table-wrapper" role="region" aria-label="What a Year Actually Costs" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Tool &amp; plan</th>
+          <th scope="col">Per month</th>
+          <th scope="col">Per year</th>
+          <th scope="col">What forces the next jump</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer">MailerLite</a> Comfort</td>
+          <td>$17.10</td>
+          <td>≈ $205</td>
+          <td>Sending volume (10× tier cap)</td>
+        </tr>
+        <tr>
+          <td><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer">ActiveCampaign</a> Starter</td>
+          <td>$15</td>
+          <td>$180</td>
+          <td>Automation depth (5-action cap) and contact count</td>
+        </tr>
+        <tr>
+          <td><a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow">Systeme.io</a> Startup</td>
+          <td>$14.17</td>
+          <td>$170</td>
+          <td>Automation rules and course count</td>
+        </tr>
+        <tr>
+          <td><a href={kitUrl} target="_blank" rel="noopener noreferrer">Kit</a> Creator</td>
+          <td>$33</td>
+          <td>$390</td>
+          <td>Nothing at this size — automation already included</td>
+        </tr>
+        <tr>
+          <td><a href={beehiivUrl} target="_blank" rel="sponsored nofollow">Beehiiv</a> Lite</td>
+          <td>$49</td>
+          <td>$588</td>
+          <td>Branding removal pushes you to Pro ($1,140/yr)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Read the table the way a beginner should: the cheapest year (ActiveCampaign) buys the shallowest starter automation and bills you for unsubscribed contacts; the most expensive (Beehiiv) buys a monetisation engine for a newsletter business. Price is a job description, not a ranking.
+  </p>
+
+  <h2 id="pros-and-cons">Pros &amp; Cons</h2>
+
+  <h3><a href={kitUrl} target="_blank" rel="noopener noreferrer">Kit</a></h3>
+  <section class="pros-cons-section" aria-label="Kit Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Largest free runway in this comparison: 10,000 subscribers, unlimited sends.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Automation and tagging model creators consistently rate as the easiest to grow into.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Built-in selling: digital products, paid newsletters, tip jars — no separate cart tool.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Free done-for-you migration on paid plans.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The free plan cannot send a single automated welcome email — the paywall sits exactly where beginners first feel it.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The September 2025 reprice more than doubled the Creator entry price at small list sizes; legacy users are still vocal about it.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Auto-upgrades when you cross a tier; downgrades require emailing support.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>3.5% + 30¢ sales fee on every plan adds up for product sellers.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={beehiivUrl} target="_blank" rel="sponsored nofollow">Beehiiv</a></h3>
+  <section class="pros-cons-section" aria-label="Beehiiv Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Free plan is a real publishing platform: website, unlimited sends, recommendation network.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>0% platform take on paid subscriptions and products — where Substack takes 10%.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Growth is a feature, not an afterthought: recommendations, boosts and an ad network.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Clean, newsletter-native editor that beginners consistently describe as the fastest to learn.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Everything money-shaped is paywalled: paid subs, ads and automations all start at $49/mo.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>October 2026 repricing raised prices at every tier; long-time users call out the timing (growth first, invoice later).</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Removing beehiiv's branding needs the $95/mo Pro plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>It is a newsletter platform, not a marketing suite: no funnels, no course hosting, thin behaviour-based automation next to Kit or ActiveCampaign.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer">MailerLite</a></h3>
+  <section class="pros-cons-section" aria-label="MailerLite Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Automations on the free plan — the only tool here that offers them at $0.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Cheapest paid step of the four ($12/mo), with 3 seats included.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Pricing is published in full, in plain language, with no demo-call gatekeeping.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Website and landing-page builders included from the free plan up.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The free plan was cut hard in June 2026 (500 → 250 subscribers; 12,000 → 2,500 sends). Trust cost is real, and it may shrink again.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Account approval: new accounts are reviewed before sending, and rejections with thin explanations are a recurring complaint in user feedback.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Cumulative subscriber counting means deleting people does not lower this cycle's bill.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Paid plans auto-charge you into the next tier when you outgrow the current one.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer">ActiveCampaign</a></h3>
+  <section class="pros-cons-section" aria-label="ActiveCampaign Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The deepest automation builder in this comparison — branching, behaviour triggers, site tracking — even if Starter caps it.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Strong deliverability reputation built over two decades of sending.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Scales from email into a genuine sales-automation system as a business grows.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>No free plan: the experiment costs money from day 15.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>New accounts pay for <strong>all</strong> contacts — unsubscribed and bounced included (since November 2025). The single most criticised billing change in this category this year.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Starter's 5-action automation cap makes the headline price more of a demo of the real product (Plus, $49/mo).</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The interface and feature depth overwhelm true beginners; it is built for operators, not first-timers.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h2 id="who-should-use-each">Who Should (and Shouldn't) Use Each</h2>
+  <p>
+    <strong>Choose <a href={kitUrl} target="_blank" rel="noopener noreferrer">Kit</a> if</strong> you are a creator whose list exists to sell — products, coaching, a paid newsletter — and you want automation that will not need replacing at 5,000 subscribers. <strong>Skip Kit if</strong> your budget is truly $0 and you need automation now (MailerLite or Systeme.io), or if your newsletter itself is the product (Beehiiv).
+  </p>
+  <p>
+    <strong>Choose <a href={mailerLiteUrl} target="_blank" rel="noopener noreferrer">MailerLite</a> if</strong> you want to start this week, automate a welcome sequence today, and keep the first paid bill at $12. <strong>Skip MailerLite if</strong> your list will pass 250 subscribers quickly and you resent re-platform risk — its free tier has already shrunk once.
+  </p>
+  <p>
+    <strong>Choose <a href={beehiivUrl} target="_blank" rel="sponsored nofollow">Beehiiv</a> if</strong> you are a writer building a newsletter business — paid subscriptions, sponsors, growth through recommendations. <strong>Skip Beehiiv if</strong> you need funnels, courses, checkout or deep automation; you will end up stacking tools around it.
+  </p>
+  <p>
+    <strong>Choose <a href={activeCampaignUrl} target="_blank" rel="noopener noreferrer">ActiveCampaign</a> if</strong> you already have leads, a pipeline, and automations you can describe on paper — and you have read the contact-counting rules and accept them. <strong>Skip ActiveCampaign if</strong> you are choosing your first-ever email tool. It is the answer to a later question.
+  </p>
+
+  <h2 id="faq">FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Which of these is actually free to start?</h3>
+      <p>
+        Three of the four. Kit (up to 10,000 subscribers, no automations), Beehiiv (up to 2,500, no monetisation features) and MailerLite (up to 250, automations included) all have permanent free plans with no credit card required. ActiveCampaign has a 14-day trial only.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>When will I be forced to pay?</h3>
+      <p>
+        At the moment you need the thing each free plan withholds: automation on Kit ($39/mo), monetisation on Beehiiv ($49/mo), subscriber #251 on MailerLite ($12/mo) — or day 15 on ActiveCampaign ($15/mo). Plan for the withholding, not the headline price.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Which tool has the best deliverability?</h3>
+      <p>
+        All four are established senders with proper infrastructure, and no honest comparison can crown one from pricing pages. Beginners land in spam because of list quality, missing domain authentication and sudden volume — all within your control on any of these platforms. Pick on fit and billing rules; keep your list clean.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I switch later without losing my subscribers?</h3>
+      <p>
+        Yes — your list exports as a CSV from all four, and Kit offers a free done-for-you migration on paid plans. What does <strong>not</strong> move is the plumbing: forms, landing pages, automations and sequences must be rebuilt in the new tool. That rebuild cost, not the subscription, is why the first choice matters.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if I also want to sell a course or run funnels?</h3>
+      <p>
+        Then you are outside what these four are for. Either stack a separate tool (and pay the "tool tax" our <a href="/blog/systeme-io-review">Systeme.io review</a> breaks down) or start with an all-in-one whose free plan already includes funnels, a course and checkout.
+      </p>
+    </div>
+  </div>
+
+  <h2 id="bottom-line">Bottom Line</h2>
+  <p>
+    For a beginner, the decision is not "which tool is best" but "which paywall do I want to meet first." Kit makes you pay for automation and gives you the longest free runway to reach it. MailerLite makes you pay for audience size and gives you automation from day one. Beehiiv makes you pay for monetisation and gives you a growth engine in exchange. ActiveCampaign makes you pay from day one — for everyone on your list, including the people who left — and gives you the deepest automation of the four when you grow into it.
+  </p>
+  <p>
+    Start free where your first job lives, read the counting rules before you import a single contact, and let outgrowing a free plan be the good problem it is supposed to be.
+  </p>
+  <p>
+    <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Try Systeme.io free &rarr;</strong></a> — the free all-in-one alternative covered above, if your first job is selling rather than publishing.
+  </p>
+</ArticleLayout>
+
+<style>
+  .verdict-container {
+    margin: 1.5rem 0 2.25rem;
+  }
+
+  .best-for-box {
+    background-color: var(--bg-surface);
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .verdict-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .ribbon-badge {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .verdict-table-wrapper {
+    margin: 1rem 0 1.25rem !important;
+  }
+
+  .verdict-summary-lines {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .verdict-cta-after {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .verdict-cta-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.98rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .th-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .th-link:hover {
+    color: #A7F3D0;
+  }
+
+  .pros-cons-section {
+    margin: 1rem 0 2rem;
+  }
+
+  .pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .pc-box {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pros-box {
+    border-top: 4px solid var(--accent-emerald);
+  }
+
+  .cons-box {
+    border-top: 4px solid var(--accent-red);
+  }
+
+  .pc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .pc-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .pc-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .pros-icon {
+    background-color: #D1FAE5;
+    color: #065F46;
+  }
+
+  .cons-icon {
+    background-color: #FEE2E2;
+    color: #991B1B;
+  }
+
+  .pc-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc-box li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .pc-box li:last-child {
+    margin-bottom: 0;
+  }
+
+  .pc-bullet {
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  .pro-bullet {
+    color: var(--accent-emerald);
+  }
+
+  .con-bullet {
+    color: var(--accent-red);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
+  }
+
+  .faq-item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-item h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.08rem;
+    color: var(--text-primary);
+  }
+
+  .faq-item p {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+
+  @media (max-width: 680px) {
+    .pros-cons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
