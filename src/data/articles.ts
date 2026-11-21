@@ -75,11 +75,24 @@ export const categories: Category[] = [
     slug: 'digital-products',
     description: 'Frictionless checkouts, digital download storefronts, and licensing tools for selling templates, guides, and software.',
     toolExamples: 'Gumroad, Lemon Squeezy, Stan Store, Payhip',
-    articleCount: 0,
+    articleCount: 1,
   },
 ];
 
 export const articles: ArticleMeta[] = [
+  {
+    slug: 'best-platforms-to-sell-digital-products',
+    title: 'Best Platforms to Sell Digital Products (2026): Gumroad vs Podia vs Lemon Squeezy vs Stan Store, Honestly Compared',
+    excerpt: 'There is no single best platform for a first digital product — there are four different answers to four different fears, and one of the four can no longer be chosen at all.',
+    category: 'Digital Products',
+    categorySlug: 'digital-products',
+    author: 'Productivity Software Reviews Editorial Team',
+    publishedDate: '2026-11-21',
+    updatedDate: '2026-11-21',
+    updatedDateFormatted: 'Nov 21, 2026',
+    readTime: '11 min read',
+    featured: true,
+  },
   {
     slug: 'best-email-marketing-for-beginners',
     title: 'Best Email Marketing for Beginners (2026): Kit vs Beehiiv vs MailerLite vs ActiveCampaign, Honestly Compared',

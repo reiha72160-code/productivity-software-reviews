@@ -1,0 +1,851 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const cta_link = 'https://gumroad.com';
+const cta_label = 'Try Gumroad free';
+
+const gumroadUrl = 'https://gumroad.com';
+const podiaUrl = 'https://www.podia.com';
+const lemonSqueezyUrl = 'https://www.lemonsqueezy.com';
+const stanStoreUrl = 'https://www.stan.store';
+const systemeAffiliateUrl = 'https://systeme.io/?sa=sa02859084270bd353464c30d767d5af7f06091e23';
+
+const toc = [
+  { id: 'quick-verdict', label: 'Quick Verdict' },
+  { id: 'the-problem', label: 'The Problem: Three Fears Every Beginner Has' },
+  { id: 'what-each-tool-is-for', label: 'What Each Tool Is Actually For' },
+  { id: 'comparison-table', label: 'The Comparison Table' },
+  { id: 'pricing-tool-by-tool', label: 'Pricing, Tool by Tool — With the Real Limits' },
+  { id: 'what-a-year-costs', label: 'What a Year Actually Costs (at $500/month in sales)' },
+  { id: 'pros-and-cons', label: 'Pros & Cons' },
+  { id: 'who-should-use-each', label: "Who Should (and Shouldn't) Use Each" },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'bottom-line', label: 'Bottom Line' },
+];
+---
+
+<ArticleLayout
+  title="Best Platforms to Sell Digital Products (2026): Gumroad vs Podia vs Lemon Squeezy vs Stan Store, Honestly Compared"
+  description="There is no single best platform for a first digital product — there are four different answers to four different fears, and one of the four can no longer be chosen at all."
+  category="Digital Products"
+  categorySlug="digital-products"
+  author="Productivity Software Reviews Editorial Team"
+  publishedDate="2026-11-21"
+  updatedDate="2026-11-21"
+  updatedDateFormatted="Nov 21, 2026"
+  readTime="11 min read"
+  toc={toc}
+  cta_link={cta_link}
+  cta_label={cta_label}
+  hideDefaultDisclosure={true}
+>
+  <div class="affiliate-notice" role="note">
+    <strong>Transparency Note:</strong> This comparison is based on hands-on time with the free plans and trials these tools offer, a full audit of each platform's official pricing and documentation, and aggregated feedback from public user reviews and creator communities. If you sign up through links on this page, we may earn a commission at no extra cost to you. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.
+  </div>
+
+  <div class="verdict-container">
+    <aside class="best-for-box" aria-label="Quick Verdict">
+      <div class="verdict-ribbon">
+        <span class="ribbon-badge">Quick Verdict</span>
+        <span class="rating-pill">Editorial Ranking (2026)</span>
+      </div>
+
+      <p class="verdict-box-text">
+        There is no single best platform for a first digital product — there are four different answers to four different fears, and one of the four can no longer be chosen at all. Ranked for a true beginner: <a href={gumroadUrl} target="_blank" rel="noopener noreferrer"><strong>Gumroad</strong></a> is the zero-risk start, with taxes handled for you. <a href={stanStoreUrl} target="_blank" rel="noopener noreferrer"><strong>Stan Store</strong></a> is the link-in-bio storefront with 0% platform fees. <a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a> is the platform you grow into. <a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer"><strong>Lemon Squeezy</strong></a> had the best fee model in the category — and it is closing, so beginners cannot start there.
+      </p>
+
+      <ul class="verdict-ranking-list">
+        <li>
+          🏆 <strong>1. <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a></strong> — <strong>4.2/5</strong> &middot; Zero-risk start: no monthly fee, taxes handled
+        </li>
+        <li>
+          🥈 <strong>2. <a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a></strong> — <strong>4.0/5</strong> &middot; Link-in-bio storefront, 0% platform fees
+        </li>
+        <li>
+          🥉 <strong>3. <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a></strong> — <strong>3.7/5</strong> &middot; The platform you grow into: courses + community
+        </li>
+        <li>
+          <strong>4. <a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a></strong> — <strong>2.5/5</strong> &middot; Best fee model — but closing March 2027
+        </li>
+      </ul>
+    </aside>
+
+    {cta_link && (
+      <div class="verdict-cta-after">
+        <a
+          href={cta_link}
+          class="btn btn-primary verdict-cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {cta_label} &rarr;
+        </a>
+      </div>
+    )}
+  </div>
+
+  <h2 id="quick-verdict">Quick Verdict</h2>
+
+  <p>
+    There is no single "best" platform for a first digital product — there are four different answers to four different fears, and one of the four can no longer be chosen at all. Ranked for a true beginner (first ebook, template pack, printable or mini-course; little or no audience; sales still hypothetical):
+  </p>
+
+  <div class="data-table-wrapper" role="region" aria-label="Quick Verdict Ranking" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Tool</th>
+          <th scope="col">Editorial Score</th>
+          <th scope="col">One-line verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href={gumroadUrl} target="_blank" rel="noopener noreferrer"><strong>Gumroad</strong></a></td>
+          <td>4.2 / 5</td>
+          <td>The zero-risk start: no monthly fee and taxes handled for you — paid for with the steepest per-sale cut in this comparison.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer"><strong>Stan Store</strong></a></td>
+          <td>4.0 / 5</td>
+          <td>The link-in-bio storefront: 0% platform fees and courses included, but $29/mo rent from day one and taxes stay your problem.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a></td>
+          <td>3.7 / 5</td>
+          <td>The platform you grow into: a real course-and-community business in a box, at the highest beginner-year cost here.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer"><strong>Lemon Squeezy</strong></a></td>
+          <td>2.5 / 5</td>
+          <td>The best fee model in the category — and it is closing. Sign-ups are shut and the service ends March 31, 2027, so beginners cannot start here.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    <strong>Best for:</strong> <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a> — anyone making a first product who wants to sell today without a subscription or a tax setup. <a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a> — social-first creators whose traffic lives on TikTok/Instagram and who expect at least a few hundred dollars a month in sales. <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> — creators whose second product is a course or community and who want one platform for all of it. <a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a> — nobody new, as of November 2026 (existing sellers: see the migration note in its section).<br />
+    <strong>Not for:</strong> anyone who wants selling, email, funnels and courses in one free account — that is a different shape of tool (see the Systeme.io note at the end).
+  </p>
+
+  <h2 id="the-problem">The Problem: Three Fears Every Beginner Has (and Pricing Pages Make Worse)</h2>
+  <p>
+    Spend one evening in digital-product communities and the same three posts repeat:
+  </p>
+  <p>
+    <strong>1. "The fee was supposed to be 10%. Why did my $10 ebook pay me $7.91?"</strong> Because the headline percentage is never the whole cut. Fixed per-transaction fees and card processing stack on top, and they punish cheap products hardest: on Gumroad a $10 sale loses $1.00 (10%) + $0.50 (fixed fee) + $0.29 + $0.30 (card processing) — roughly a fifth of the price. Subscription platforms hide the same cost differently: the fee is 0%, but the $29–$49 monthly rent is due in months when you sell nothing. There is no free option here; there is only the choice of paying per sale or paying per month.
+  </p>
+  <p>
+    <strong>2. "A buyer in Germany just bought my template. Do I owe VAT somewhere?"</strong> This is the question that separates the four tools more than any feature list. On a merchant-of-record platform (Gumroad since January 2025; Lemon Squeezy by design), the platform is legally the seller, collects and remits sales tax and VAT worldwide, and the fear evaporates. On Podia and Stan Store, you are the seller: the platform calculates and collects tax only in jurisdictions you register in, and filing and remitting is your job. Beginners consistently underestimate this difference because pricing pages advertise fees in bold and tax responsibility in footnotes.
+  </p>
+  <p>
+    <strong>3. "I made my first sales. When do I actually see the money — and can the platform just keep it?"</strong> Every platform here has a gate between "sold" and "paid": Gumroad reviews every new account before the first payout (typically 3–4 sales and a balance over $100, one to three weeks) and holds a $100 minimum; Stan makes you cash out manually from $10; Podia sends money straight to your own Stripe, which is exactly why it has no gate of its own. Layered on top is the loudest complaint pattern in this category: accounts frozen or put "under review" with automated explanations. The gate you can read in advance is fine; the one that surprises you is not.
+  </p>
+
+  <h2 id="what-each-tool-is-for">What Each Tool Is Actually For</h2>
+  <div class="data-table-wrapper" role="region" aria-label="What Each Tool Is Actually For" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Job</th>
+          <th scope="col">Best fit here</th>
+          <th scope="col">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sell a first file today, $0 upfront, taxes handled</td>
+          <td><a href={gumroadUrl} target="_blank" rel="noopener noreferrer"><strong>Gumroad</strong></a></td>
+          <td>No monthly fee; merchant of record since Jan 2025; Discover marketplace on top</td>
+        </tr>
+        <tr>
+          <td>Turn a social profile into a store (link in bio)</td>
+          <td><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer"><strong>Stan Store</strong></a></td>
+          <td>Mobile storefront, 0% platform fee, courses and community included on the $29 plan</td>
+        </tr>
+        <tr>
+          <td>Build a course + community business on one platform</td>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a></td>
+          <td>Courses, community, website and email in one subscription; 0% transaction fee on the $99 plan</td>
+        </tr>
+        <tr>
+          <td>The lowest all-in fee with tax handled</td>
+          <td><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer"><strong>Lemon Squeezy</strong></a></td>
+          <td>5% + 50¢ including processing, true merchant of record — <strong>but closed to new sign-ups; shuts down Mar 31, 2027</strong></td>
+        </tr>
+        <tr>
+          <td>Selling + email + funnels + courses in one free account</td>
+          <td><a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Systeme.io</strong></a></td>
+          <td>All-in-one; covered in our <a href="/blog/systeme-io-review">Systeme.io review</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="comparison-table">The Comparison Table (verified 2026-11-20)</h2>
+  <div class="data-table-wrapper" role="region" aria-label="The Comparison Table" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"><a href={gumroadUrl} target="_blank" rel="noopener noreferrer" class="th-link">Gumroad</a></th>
+          <th scope="col"><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer" class="th-link">Stan Store</a></th>
+          <th scope="col"><a href={podiaUrl} target="_blank" rel="noopener noreferrer" class="th-link">Podia</a></th>
+          <th scope="col"><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer" class="th-link">Lemon Squeezy</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Monthly cost</strong></td>
+          <td>$0 — no plans</td>
+          <td>Creator $29/mo ($300/yr); Pro $99/mo</td>
+          <td>Mover $49/mo ($42/mo billed yearly); Shaker $99/mo</td>
+          <td>$0 — transaction-based only</td>
+        </tr>
+        <tr>
+          <td><strong>Free plan / trial</strong></td>
+          <td>Free to start (fees per sale)</td>
+          <td>14-day trial, no free plan</td>
+          <td>14-day trial, no free plan</td>
+          <td>Was free to start — <strong>sign-ups now closed</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Platform fee per sale</strong></td>
+          <td>10% + $0.50 (direct); 30% flat on Discover sales</td>
+          <td>0%</td>
+          <td>5% on Mover; 0% on Shaker and up</td>
+          <td>5% + 50¢ (processing included)</td>
+        </tr>
+        <tr>
+          <td><strong>Card processing</strong></td>
+          <td>On top: 2.9% + 30¢</td>
+          <td>On top: 2.9% + 30¢ via Stripe</td>
+          <td>On top: 2.9% + 30¢</td>
+          <td>Included in the 5% + 50¢</td>
+        </tr>
+        <tr>
+          <td><strong>Who handles sales tax / VAT</strong></td>
+          <td><strong>Platform (merchant of record, worldwide)</strong></td>
+          <td>You — Stripe Tax collects only where you register; you file and remit</td>
+          <td>You — Podia collects where you register; you file and remit</td>
+          <td><strong>Platform (merchant of record)</strong> — for existing sellers until shutdown</td>
+        </tr>
+        <tr>
+          <td><strong>Payout gate</strong></td>
+          <td>$100 minimum; every new account reviewed before first payout</td>
+          <td>Manual cash-out, $10 minimum, plus 0.25% + $0.25 payout fee</td>
+          <td>None of Podia's — money goes straight to your own Stripe/PayPal</td>
+          <td>$50 minimum, twice-monthly payouts</td>
+        </tr>
+        <tr>
+          <td><strong>The catch</strong></td>
+          <td>Steepest per-sale cut here; payout holds and account reviews are the category's loudest complaint</td>
+          <td>Rent is due even at $0 sales; email sending and affiliate tools are gated to the $99 Pro plan</td>
+          <td>Priciest beginner year; PayPal, upsells and your own affiliate program gated to Shaker ($99)</td>
+          <td><strong>Shuts down March 31, 2027</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="pricing-tool-by-tool">Pricing, Tool by Tool — With the Real Limits</h2>
+
+  <h3><a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a> — free to start, expensive per sale</h3>
+  <p>
+    Gumroad is the only tool here with <strong>no monthly fee and no plans at all</strong>: you pay <strong>10% + $0.50 per direct sale, plus card processing (2.9% + $0.30)</strong> — an all-in cut of about 12.9% + $0.80. On a $25 product that is $4.03 gone; on a $10 product it is $2.09, over a fifth of the price. Sales that come through Gumroad's Discover marketplace cost a flat <strong>30%</strong> (processing included). One genuine improvement: once your paid sales pass <strong>$20,000 in a calendar month</strong>, direct-sale fees drop to 5% + $0.50 for the rest of that month. Since January 1, 2025, Gumroad is the <strong>merchant of record for all sales</strong> — it collects and remits sales tax and VAT worldwide, and you manage no tax settings at all. You can sell downloads, ebooks, courses, memberships and bundles, with files up to 20 GB on paid products.
+  </p>
+  <p>
+    Fine print worth knowing: payouts run on a schedule you choose (daily/weekly/monthly/quarterly), but there is a <strong>$100 minimum balance</strong>, a minimum 7-day hold, and <strong>every new account is reviewed before its first payout</strong> — Gumroad's own help page says the review typically means 3–4 sales with a balance over $100 and can take one to three weeks. PayPal payouts carry a 2% fee. And the complaint pattern is real: in a counted sample of Gumroad's recent Trustpilot reviews, the dominant themes were suspended accounts, held or skipped payouts, and confusion over the $100 minimum (see production notes). The fees are published and predictable; the review process is the risk you are actually taking.
+  </p>
+
+  <h3><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a> — 0% fees, $29 rent</h3>
+  <p>
+    Stan is a link-in-bio storefront built for social traffic: <strong>Creator is $29/mo ($300/yr)</strong> and includes unlimited digital products, a course builder, coaching-call bookings, memberships and community. <strong>Stan takes 0% of your sales</strong> — you pay Stripe's standard 2.9% + $0.30 processing, plus a small <strong>0.25% + $0.25 fee each time you cash out</strong> (minimum $1 per cash-out). The maths flips Gumroad's: Stan is the more expensive option until roughly <strong>$250/mo in sales</strong>, and the cheaper one above it. What the $29 plan does not include is the growth machinery: funnels, upsells, order bumps, discount codes, pixel tracking and actual email sending (broadcasts and flows) all sit on <strong>Creator Pro at $99/mo</strong> — the base plan collects email addresses but cannot send to them. Your own affiliate program (letting customers resell your products) is also Pro-only.
+  </p>
+  <p>
+    Fine print worth knowing: <strong>you are the seller of record</strong>. Stan's tax feature works through Stripe Tax and only collects in regions where you have registered; exporting the tax report and filing is your job — the opposite of Gumroad's hands-off model, and the thing social-first beginners least expect. Payouts are manual, full-balance cash-outs from a <strong>$10 minimum</strong>; a first sale typically takes 3–7 business days to become cash-out-able. There is no free plan, only a 14-day trial — the rent starts before the revenue does.
+  </p>
+
+  <h3><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> — the course business in a box, priced like it</h3>
+  <p>
+    Podia is the most complete platform here: courses, digital downloads, coaching, community, a website with a custom domain, and email marketing in every plan. <strong>Mover is $49/mo ($42/mo billed yearly)</strong> with a <strong>5% transaction fee</strong>; <strong>Shaker is $99/mo ($84/mo yearly)</strong> with <strong>0% transaction fees</strong>. Card processing (2.9% + $0.30, via your own Stripe or PayPal) is on top of both. Because the money flows through <strong>your own</strong> payment accounts, Podia never holds your revenue — there is no Podia payout threshold or review gate, which is a real structural advantage over Gumroad. The plan caps are the trade: Mover allows 50 products and includes 100 email subscribers (more cost extra), and <strong>PayPal, upsells, Zapier and running your own affiliate program are all gated to Shaker</strong>.
+  </p>
+  <p>
+    Fine print worth knowing: Podia is <strong>not</strong> your merchant of record. It automatically collects sales tax at checkout for jurisdictions <strong>you</strong> register in, across 230 jurisdictions — but registering, filing and remitting stay with you. Podia also has a recent history of charging more for less: the free plan was removed in October 2024, prices rose again in June 2026 (Mover $39 → $49), and features that were once standard keep moving up-tier. At beginner volumes Mover is the most expensive option in this comparison (see the year-one table); it starts winning when your catalogue — not your fee percentage — is the business.
+  </p>
+
+  <h3><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a> — the best model in the category, closing down</h3>
+  <p>
+    On paper, Lemon Squeezy wins this comparison and it is not close: <strong>5% + 50¢ per transaction with payment processing included</strong>, no monthly fee, a true <strong>merchant of record</strong> that takes on tax calculation and remittance liability globally, built-in license keys, and payouts twice a month from a $50 minimum. It is the platform a thousand comparison articles (including, until now, drafts like this one) recommend to beginners.
+  </p>
+  <p>
+    <strong>It is also closed.</strong> Lemon Squeezy's own homepage and documentation now state that it is <strong>no longer accepting new sign-ups and will stop processing transactions on March 31, 2027</strong>. If you are reading this as a beginner choosing a first platform, Lemon Squeezy is simply not available to you — and any review that still ranks it #1 without that headline is out of date. Existing sellers have a migration window, not a future: the docs point them toward Stripe Managed Payments. We score it 2.5/5 for a beginner in November 2026 — the score is for the closure, not the product, which on fees and tax handling alone would have topped this list.
+  </p>
+
+  <h3>The free all-in-one alternative: <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow">Systeme.io</a></h3>
+  <p>
+    If your plan is "a product <strong>and</strong> an email list <strong>and</strong> a funnel <strong>and</strong> maybe a course", none of the four above bundles that — you would be stacking a store on top of an email tool on top of a funnel tool. Systeme.io's free plan covers selling with <strong>0% platform transaction fees</strong>, plus funnels, one online course and email for up to 2,000 contacts in one dashboard. Its storefront is plainer than Stan's and its course features thinner than Podia's — that trade is the whole story. Full breakdown in our <a href="/blog/systeme-io-review">Systeme.io review</a>, and once the sales start, our <a href="/blog/best-email-marketing-for-beginners">beginner email marketing comparison</a> covers the list-building half of the stack.
+  </p>
+
+  <h2 id="what-a-year-costs">What a Year Actually Costs (at $500/month in sales)</h2>
+  <p>
+    The only honest way to compare a per-sale fee with a subscription: run one scenario through all four. Assumptions: $500/month in sales ($6,000/year), 20 sales a month of a $25 product, US card payments, direct sales (not Gumroad Discover), monthly billing, Stan cashed out monthly.
+  </p>
+
+  <div class="data-table-wrapper" role="region" aria-label="What a Year Actually Costs" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Tool &amp; plan</th>
+          <th scope="col">Plan cost / yr</th>
+          <th scope="col">Fees &amp; processing / yr</th>
+          <th scope="col">Total cost / yr</th>
+          <th scope="col">You keep</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a></td>
+          <td>$0</td>
+          <td>$420</td>
+          <td><strong>$420</strong></td>
+          <td>$5,580 — <em>but closed to new sign-ups</em></td>
+        </tr>
+        <tr>
+          <td><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a> Creator</td>
+          <td>$348</td>
+          <td>≈ $261</td>
+          <td><strong>≈ $609</strong></td>
+          <td>≈ $5,391</td>
+        </tr>
+        <tr>
+          <td><a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a></td>
+          <td>$0</td>
+          <td>$966</td>
+          <td><strong>$966</strong></td>
+          <td>$5,034</td>
+        </tr>
+        <tr>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> Mover</td>
+          <td>$588</td>
+          <td>$546</td>
+          <td><strong>$1,134</strong></td>
+          <td>$4,866</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Read the table the way a beginner should: at $0 in sales the order inverts — Gumroad and Lemon Squeezy cost nothing, Stan costs $348 and Podia $588 for the privilege of waiting. At $500/mo, Stan's rent is already cheaper than Gumroad's percentage. And Podia's row buys things the others do not sell at any fee: a course platform, a community and a website. Fees are a job description, not a ranking — but run your own expected number through the maths before you pick, because the crossover points (≈ $250/mo for Stan vs Gumroad, ≈ $700/mo for Podia Mover vs Gumroad) are where the right answer changes.
+  </p>
+
+  <h2 id="pros-and-cons">Pros &amp; Cons</h2>
+
+  <h3><a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a></h3>
+  <section class="pros-cons-section" aria-label="Gumroad Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>$0 to start and $0 in slow months — the only genuinely pay-as-you-go option here.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Merchant of record since January 2025: sales tax and VAT collected and remitted worldwide, zero tax setup.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Sellable in minutes: downloads, ebooks, courses, memberships, bundles; files up to 20 GB.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Discover marketplace can put a product in front of buyers you do not have yet.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The steepest per-sale cut here: ~16% all-in on a $25 product, ~21% on a $10 product.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>$100 payout minimum and a first-payout account review (typically 3–4 sales, 1–3 weeks).</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Suspended accounts and held/skipped payouts are the dominant themes in its recent negative reviews; support is widely described as automated.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Discover's 30% flat fee is the price of its traffic — steep if the buyer was already yours.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a></h3>
+  <section class="pros-cons-section" aria-label="Stan Store Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>0% platform fee: at $500/mo in sales it is the cheapest available option in this comparison.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Storefront, courses, coaching bookings, memberships and community in the $29 base plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Built for where beginner traffic actually is: a phone-first link-in-bio store.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>14-day trial and simple, published pricing.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>$29/mo is due from month one, including months with zero sales; no free plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>You are the seller of record: tax registration, collection regions and filing are yours to manage.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Email sending, funnels, upsells and your own affiliate program are all gated to the $99/mo Pro plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Manual, full-balance-only cash-outs with a per-payout fee behind the "0%" headline.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a></h3>
+  <section class="pros-cons-section" aria-label="Podia Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The most complete business here: courses, community, website, email and downloads in one subscription.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Money goes straight to your own Stripe/PayPal — no platform payout threshold, hold or review gate.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>0% transaction fee on Shaker; structured plans with published caps.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>14-day free trial, no credit card required.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The most expensive beginner year in this comparison ($1,134 at $500/mo in sales on Mover).</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Mover's 5% transaction fee plus caps (50 products, 100 included email subscribers) push you to Shaker fast.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>PayPal, upsells, Zapier and your own affiliate program are gated to the $99 plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Repeated price rises and feature re-gating (free plan removed Oct 2024; Mover $39 → $49 in Jun 2026) are a recurring trust complaint; tax filing remains your job.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a></h3>
+  <section class="pros-cons-section" aria-label="Lemon Squeezy Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The best fee maths in the category: 5% + 50¢ with processing included.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>True merchant of record: tax calculation and remittance liability taken on globally.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Built-in license keys, subscriptions and unlimited products.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span><strong>Closed to new sign-ups; shuts down March 31, 2027.</strong> Not a platform a beginner can choose.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Even before the closure, account approval friction and frozen funds during reviews were its dominant complaint themes.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Twice-monthly payouts with a 13-day hold and a $50 minimum were slow by category standards.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h2 id="who-should-use-each">Who Should (and Shouldn't) Use Each</h2>
+  <p>
+    <strong>Choose <a href={gumroadUrl} target="_blank" rel="noopener noreferrer">Gumroad</a> if</strong> you have a first product and no audience yet, and you want to be selling today with no subscription and no tax setup. <strong>Skip Gumroad if</strong> your product is cheap and your volume is real — past a few hundred dollars a month, its percentage costs more than a subscription — or if a frozen payout would genuinely hurt you.
+  </p>
+  <p>
+    <strong>Choose <a href={stanStoreUrl} target="_blank" rel="noopener noreferrer">Stan Store</a> if</strong> your traffic is social, your storefront is a link in bio, and you realistically expect $250+/mo in sales to make the 0% fee beat Gumroad's cut. <strong>Skip Stan if</strong> you are pre-revenue and unsure the product will sell (rent first, proof later is the wrong order), or if you need email sending and upsells without jumping to $99/mo.
+  </p>
+  <p>
+    <strong>Choose <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> if</strong> your roadmap is courses and community, you want one platform instead of a stack, and you value getting paid directly through your own Stripe. <strong>Skip Podia if</strong> you are selling a single $15 ebook — you would be paying course-platform rent for a file download.
+  </p>
+  <p>
+    <strong>Choose <a href={lemonSqueezyUrl} target="_blank" rel="noopener noreferrer">Lemon Squeezy</a> if</strong> — you can't. It is closed to new sign-ups and shuts down on March 31, 2027. If you are an existing seller, treat the next few months as a migration window (its own docs recommend Stripe Managed Payments) rather than a growth period.
+  </p>
+
+  <h2 id="faq">FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Which of these is actually free to start?</h3>
+      <p>
+        Only Gumroad, in the sense that matters: no monthly fee, pay per sale. Stan and Podia offer 14-day trials and then charge monthly. Lemon Squeezy was free to start — sign-ups are now closed.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Who handles my sales tax and VAT?</h3>
+      <p>
+        Gumroad and Lemon Squeezy act as merchant of record and collect and remit sales tax/VAT worldwide. On Podia and Stan Store you are the seller: the platform collects tax only in jurisdictions you register in, and filing and remitting are your responsibility. For a beginner selling internationally, this difference is bigger than any fee gap in this article.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why do so many articles still recommend Lemon Squeezy?</h3>
+      <p>
+        Because until this month it deserved it — and because comparison content ages badly. Lemon Squeezy announced it is no longer accepting new sign-ups and will stop processing payments on March 31, 2027. Check the date on any review that ranks it first.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>When do I actually get paid?</h3>
+      <p>
+        Gumroad: after a $100 minimum, a 7-day hold and a one-time new-account review (typically 3–4 sales, one to three weeks), then on your chosen schedule. Stan: manual cash-out from $10, typically 2–7 business days after a sale becomes available. Podia: immediately into your own Stripe/PayPal, on the processor's normal timing — no Podia gate at all.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I switch later without losing my customers?</h3>
+      <p>
+        Your customer list and product files export from all four. What does not move is the plumbing: product pages, course structure, memberships and affiliate setups must be rebuilt. That rebuild cost — plus, on Gumroad and Stan, un-exportable storefront polish — is why the first choice deserves an hour of fee maths rather than a coin flip.
+      </p>
+    </div>
+  </div>
+
+  <h2 id="bottom-line">Bottom Line</h2>
+  <p>
+    For a beginner, the decision is not "which platform is best" but "which cost shape fits the sales you actually have." Gumroad charges you only when you sell and quietly removes the tax problem — at the highest per-sale price here. Stan charges you every month and removes the percentage — once you are past roughly $250/mo, that trade wins. Podia charges the most at beginner scale and removes the ceiling on what the business can become. Lemon Squeezy removed itself.
+  </p>
+  <p>
+    Start where your first job lives, run the fee maths on your real price before you commit, and let outgrowing your first platform be the good problem it is supposed to be.
+  </p>
+  <p>
+    <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Try Systeme.io free &rarr;</strong></a> — the free all-in-one alternative covered above, if your first job is selling <em>and</em> building the list that buys the next product.
+  </p>
+</ArticleLayout>
+
+<style>
+  .verdict-container {
+    margin: 1.5rem 0 2.25rem;
+  }
+
+  .best-for-box {
+    background-color: var(--bg-surface);
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .verdict-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .ribbon-badge {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .verdict-box-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.15rem;
+  }
+
+  .verdict-ranking-list {
+    list-style: none;
+    padding: 0.9rem 1.1rem;
+    margin: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .verdict-ranking-list li {
+    margin: 0;
+    font-size: 0.96rem;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+
+  .verdict-cta-after {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .verdict-cta-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.98rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .th-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .th-link:hover {
+    color: #A7F3D0;
+  }
+
+  .pros-cons-section {
+    margin: 1rem 0 2rem;
+  }
+
+  .pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .pc-box {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pros-box {
+    border-top: 4px solid var(--accent-emerald);
+  }
+
+  .cons-box {
+    border-top: 4px solid var(--accent-red);
+  }
+
+  .pc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .pc-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .pc-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .pros-icon {
+    background-color: #D1FAE5;
+    color: #065F46;
+  }
+
+  .cons-icon {
+    background-color: #FEE2E2;
+    color: #991B1B;
+  }
+
+  .pc-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc-box li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .pc-box li:last-child {
+    margin-bottom: 0;
+  }
+
+  .pc-bullet {
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  .pro-bullet {
+    color: var(--accent-emerald);
+  }
+
+  .con-bullet {
+    color: var(--accent-red);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
+  }
+
+  .faq-item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-item h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.08rem;
+    color: var(--text-primary);
+  }
+
+  .faq-item p {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+
+  @media (max-width: 680px) {
+    .pros-cons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
