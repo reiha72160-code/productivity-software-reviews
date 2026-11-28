@@ -68,7 +68,7 @@ export const categories: Category[] = [
     slug: 'online-courses',
     description: 'Course hosting platforms, cohort learning spaces, and membership communities to package and teach your expertise.',
     toolExamples: 'Teachable, Thinkific, Kajabi, Podia',
-    articleCount: 0,
+    articleCount: 1,
   },
   {
     name: 'Digital Products',
@@ -80,6 +80,19 @@ export const categories: Category[] = [
 ];
 
 export const articles: ArticleMeta[] = [
+  {
+    slug: 'best-online-course-platforms-for-beginners',
+    title: 'Best Online Course Platforms for Beginners (2026): Teachable vs Podia vs Kajabi vs Thinkific, Honestly Compared',
+    excerpt: 'There is no single best course platform for a beginner — there are four different answers to the same launch, at four very different prices.',
+    category: 'Online Courses',
+    categorySlug: 'online-courses',
+    author: 'Productivity Software Reviews Editorial Team',
+    publishedDate: '2026-11-28',
+    updatedDate: '2026-11-28',
+    updatedDateFormatted: 'Nov 28, 2026',
+    readTime: '12 min read',
+    featured: true,
+  },
   {
     slug: 'best-platforms-to-sell-digital-products',
     title: 'Best Platforms to Sell Digital Products (2026): Gumroad vs Podia vs Lemon Squeezy vs Stan Store, Honestly Compared',

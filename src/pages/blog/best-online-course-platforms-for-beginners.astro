@@ -1,0 +1,873 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+const cta_link = 'https://www.podia.com';
+const cta_label = 'Try Podia — 14-day free trial';
+
+const teachableUrl = 'https://teachable.com';
+const podiaUrl = 'https://www.podia.com';
+const kajabiUrl = 'https://kajabi.com';
+const thinkificUrl = 'https://www.thinkific.com';
+const systemeAffiliateUrl = 'https://systeme.io/?sa=sa02859084270bd353464c30d767d5af7f06091e23';
+
+const toc = [
+  { id: 'quick-verdict', label: 'Quick Verdict' },
+  { id: 'the-problem', label: 'The Problem: Three Fears Every First-Time Course Seller Has' },
+  { id: 'what-each-tool-is-for', label: 'What Each Tool Is Actually For' },
+  { id: 'comparison-table', label: 'The Comparison Table' },
+  { id: 'pricing-tool-by-tool', label: 'Pricing, Tool by Tool — With the Real Limits' },
+  { id: 'what-a-year-costs', label: 'What a Year Actually Costs (selling a $99 course)' },
+  { id: 'pros-and-cons', label: 'Pros & Cons' },
+  { id: 'who-should-use-each', label: "Who Should (and Shouldn't) Use Each" },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'bottom-line', label: 'Bottom Line' },
+];
+---
+
+<ArticleLayout
+  title="Best Online Course Platforms for Beginners (2026): Teachable vs Podia vs Kajabi vs Thinkific, Honestly Compared"
+  description="There is no single best course platform for a beginner — there are four different answers to the same launch, at four very different prices."
+  category="Online Courses"
+  categorySlug="online-courses"
+  author="Productivity Software Reviews Editorial Team"
+  publishedDate="2026-11-28"
+  updatedDate="2026-11-28"
+  updatedDateFormatted="Nov 28, 2026"
+  readTime="12 min read"
+  toc={toc}
+  cta_link={cta_link}
+  cta_label={cta_label}
+  hideDefaultDisclosure={true}
+>
+  <div class="affiliate-notice" role="note">
+    <strong>Transparency Note:</strong> This comparison is based on hands-on time with the free plans and trials these tools offer, a full audit of each platform's official pricing and documentation, and aggregated feedback from public user reviews and creator communities. If you sign up through links on this page, we may earn a commission at no extra cost to you. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.
+  </div>
+
+  <div class="verdict-container">
+    <aside class="best-for-box" aria-label="Quick Verdict">
+      <div class="verdict-ribbon">
+        <span class="ribbon-badge">Quick Verdict</span>
+        <span class="rating-pill">Editorial Ranking (2026)</span>
+      </div>
+
+      <p class="verdict-box-text">
+        There is no single best course platform for a beginner — there are four different answers to the same launch, at four very different prices. <a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a> is the gentlest start: real course features in every plan and money straight to your own Stripe. <a href={teachableUrl} target="_blank" rel="noopener noreferrer"><strong>Teachable</strong></a> solves the tax problem, but its cheapest plan is a 7.5% trap and new sellers wait weeks for a first payout. <a href={thinkificUrl} target="_blank" rel="noopener noreferrer"><strong>Thinkific</strong></a> is the strongest pure course tool — at an entry price that just doubled. <a href={kajabiUrl} target="_blank" rel="noopener noreferrer"><strong>Kajabi</strong></a> is arguably the best platform here, priced for people who already have a business.
+      </p>
+
+      <ul class="verdict-ranking-list">
+        <li>
+          🏆 <strong>1. <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a></strong> — <strong>4.0/5</strong> &middot; Gentlest start: courses, community and email in every plan
+        </li>
+        <li>
+          🥈 <strong>2. <a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a></strong> — <strong>3.8/5</strong> &middot; Tax handled — but the $29 plan is a 7.5% trap
+        </li>
+        <li>
+          🥉 <strong>3. <a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a></strong> — <strong>3.4/5</strong> &middot; Strongest classroom, entry price just doubled
+        </li>
+        <li>
+          <strong>4. <a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a></strong> — <strong>3.0/5</strong> &middot; Best platform, worst beginner maths at $143/mo
+        </li>
+      </ul>
+    </aside>
+
+    {cta_link && (
+      <div class="verdict-cta-after">
+        <a
+          href={cta_link}
+          class="btn btn-primary verdict-cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {cta_label} &rarr;
+        </a>
+      </div>
+    )}
+  </div>
+
+  <h2 id="quick-verdict">Quick Verdict</h2>
+
+  <p>
+    There is no single "best" course platform for a beginner — there are four different answers to the same launch, at four very different prices, and in 2026 all four changed their pricing or plans on the people already using them. Ranked for a true beginner (first course, small or no audience, sales still hypothetical):
+  </p>
+
+  <div class="data-table-wrapper" role="region" aria-label="Quick Verdict Ranking" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Tool</th>
+          <th scope="col">Editorial Score</th>
+          <th scope="col">One-line verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a></td>
+          <td>4.0 / 5</td>
+          <td>The gentlest start: courses, community and email in every plan, money straight to your own Stripe — with a 5% fee on the cheap plan and taxes left to you.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href={teachableUrl} target="_blank" rel="noopener noreferrer"><strong>Teachable</strong></a></td>
+          <td>3.8 / 5</td>
+          <td>The tax problem solved and the cheapest year at real volume — but only on Builder; the $29 Starter plan is a 7.5% trap, and new sellers can wait weeks for a first payout.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href={thinkificUrl} target="_blank" rel="noopener noreferrer"><strong>Thinkific</strong></a></td>
+          <td>3.4 / 5</td>
+          <td>The strongest pure course toolset on its entry plan — whose price just roughly doubled in a restructure, with EU VAT remittance still your job.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href={kajabiUrl} target="_blank" rel="noopener noreferrer"><strong>Kajabi</strong></a></td>
+          <td>3.0 / 5</td>
+          <td>Arguably the best platform here, at $143/month before your first sale and with your own affiliate program locked behind the $199 plan. A business you buy after you have one.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    <strong>Best for:</strong> <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> — a first course that also needs a website, community and email list on one bill. <a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a> — beginners selling internationally who want sales tax and VAT collected <em>and remitted</em> for them, and who will start on Builder, not Starter. <a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a> — course-first creators who want unlimited courses, certificates and affiliate tools without tier-hopping. <a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a> — creators already earning who would otherwise pay for four separate tools.<br />
+    <strong>Not for:</strong> anyone who wants a course plus email, funnels and selling in one <em>free</em> account — that is a different shape of tool (see the Systeme.io note at the end).
+  </p>
+
+  <h2 id="the-problem">The Problem: Three Fears Every First-Time Course Seller Has (and Pricing Pages Make Worse)</h2>
+  <p>
+    Spend one evening in course-creator communities and the same three posts repeat:
+  </p>
+  <p>
+    <strong>1. "The plan was $29 a month. Why is my first $99 sale worth $88?"</strong> Because the plan price is only the first meter. On Teachable's Starter plan, a $99 course loses $7.43 to Teachable's 7.5% transaction fee and $3.17 to card processing — $88.40 is what reaches you, before the plan's own $29–$39 a month. The "0% fee" platforms run the meter differently: the percentage disappears, but $82–$143 a month of rent is due in months when you sell nothing, and on Thinkific and Kajabi the 0% only holds if you use <em>their</em> checkout — bring your own Stripe account and a 0.5–2% surcharge appears. There is no free option left in this category; there is only the choice of paying per sale, paying per month, or paying both.
+  </p>
+  <p>
+    <strong>2. "My students are in twelve countries. Who files the VAT?"</strong> This is the question that separates the four more than any feature list. On Teachable Payments, Teachable calculates, collects <strong>and remits</strong> US sales tax and EU/UK VAT for you. Thinkific does the same for the US and Canada — but for UK and EU buyers it only <em>calculates</em> the VAT and hands you a report; remitting it is still your job. On Podia and Kajabi you are the seller throughout: the platforms can calculate and collect tax in places you register, and filing and remitting stay with you. Beginners underestimate this because pricing pages advertise "tax handling" in bold and split that verb in the footnotes.
+  </p>
+  <p>
+    <strong>3. "I made my first sales. When do I actually get the money — and can the deal change under me?"</strong> Every platform here has a gate between "sold" and "paid": Teachable warns new Teachable Payments accounts that initial payouts may take <strong>four to six weeks</strong> while verification completes; Thinkific holds a first payout for 7–14 days; Podia sends money straight to your own Stripe, which is exactly why it has no gate of its own. And layered on top is the loudest complaint pattern of 2025–26: the deal changing after you have built on it. Teachable migrated every school onto new plans in mid-2025 with no option to keep the old ones; Thinkific retired its Basic plan and free plan; Kajabi raised prices in January 2026 without grandfathering; Podia rebuilt itself around a community feed in June 2026 and migrated everyone. The platform you pick is a landlord, and all four landlords just rewrote the lease.
+  </p>
+
+  <h2 id="what-each-tool-is-for">What Each Tool Is Actually For</h2>
+  <div class="data-table-wrapper" role="region" aria-label="What Each Tool Is Actually For" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Job</th>
+          <th scope="col">Best fit here</th>
+          <th scope="col">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Launch a first course <em>and</em> a community, website and email list on one bill</td>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer"><strong>Podia</strong></a></td>
+          <td>Courses, community, downloads, coaching, website and email in every plan; drip, certificates and quizzes are standard course features</td>
+        </tr>
+        <tr>
+          <td>Sell internationally without touching tax filings</td>
+          <td><a href={teachableUrl} target="_blank" rel="noopener noreferrer"><strong>Teachable</strong></a> (Builder)</td>
+          <td>Teachable Payments calculates, collects and remits US sales tax and EU/UK VAT; 0% transaction fee from Builder up</td>
+        </tr>
+        <tr>
+          <td>Build a real course catalogue from day one</td>
+          <td><a href={thinkificUrl} target="_blank" rel="noopener noreferrer"><strong>Thinkific</strong></a></td>
+          <td>Unlimited courses on every plan, certificates and your own affiliate tools included on the entry plan</td>
+        </tr>
+        <tr>
+          <td>Run the whole business — courses, funnels, email, site, coaching — in one login</td>
+          <td><a href={kajabiUrl} target="_blank" rel="noopener noreferrer"><strong>Kajabi</strong></a></td>
+          <td>The most complete bundle here, priced like it; worth it only once the bundle replaces tools you already pay for</td>
+        </tr>
+        <tr>
+          <td>Course + email + funnels + selling in one free account</td>
+          <td><a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Systeme.io</strong></a></td>
+          <td>All-in-one; covered in our <a href="/blog/systeme-io-review">Systeme.io review</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="comparison-table">The Comparison Table (verified 2026-11-28)</h2>
+  <div class="data-table-wrapper" role="region" aria-label="The Comparison Table" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"><a href={teachableUrl} target="_blank" rel="noopener noreferrer" class="th-link">Teachable</a></th>
+          <th scope="col"><a href={podiaUrl} target="_blank" rel="noopener noreferrer" class="th-link">Podia</a></th>
+          <th scope="col"><a href={thinkificUrl} target="_blank" rel="noopener noreferrer" class="th-link">Thinkific</a></th>
+          <th scope="col"><a href={kajabiUrl} target="_blank" rel="noopener noreferrer" class="th-link">Kajabi</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Monthly cost</strong></td>
+          <td>Starter $39 ($29/yr-billed); Builder $89 ($69); Growth $189 ($139)</td>
+          <td>Mover $49 ($42/yr-billed); Shaker $99 ($84); Earthquaker $179 ($150)</td>
+          <td>Start $109 ($82/yr-billed); Grow $219 ($164); Expand $499 ($374)</td>
+          <td>Basic $179 ($143/yr-billed); Growth $249 ($199); Pro $499 ($399)</td>
+        </tr>
+        <tr>
+          <td><strong>Free plan / trial</strong></td>
+          <td>No free plan; 7-day trial</td>
+          <td>No free plan; 14-day trial</td>
+          <td><strong>Free plan retired</strong>; 30-day trial</td>
+          <td>No free plan; 14-day trial</td>
+        </tr>
+        <tr>
+          <td><strong>Platform fee per sale</strong></td>
+          <td><strong>7.5% on Starter</strong>; 0% on Builder and up</td>
+          <td>5% on Mover; 0% on Shaker and up</td>
+          <td>0% on Thinkific Payments; <strong>2% gateway fee on Start</strong> if you use your own Stripe</td>
+          <td>0% on Kajabi Payments; <strong>2% surcharge on Basic</strong> if you use your own Stripe</td>
+        </tr>
+        <tr>
+          <td><strong>Card processing</strong></td>
+          <td>On top: 2.9% + 30¢ (US)</td>
+          <td>On top: 2.9% + 30¢ via your own Stripe/PayPal</td>
+          <td>On top: 2.9% + 30¢, <strong>plus a 0.5% tax-solution fee</strong> on sales where tax is assessed</td>
+          <td>On top: 2.9% + 30¢ on Basic</td>
+        </tr>
+        <tr>
+          <td><strong>Who handles sales tax / VAT</strong></td>
+          <td><strong>Teachable, on Teachable Payments</strong>: calculates, collects and remits (US sales tax, EU/UK VAT, 45+ markets). On your own gateway: you</td>
+          <td>You — Podia collects only in jurisdictions you register in; you file and remit</td>
+          <td>Split — Thinkific collects and remits for US &amp; Canada; for UK/EU it calculates only and <strong>you remit</strong></td>
+          <td>You — Kajabi's own words: "you remain the merchant of record." Its tax tool calculates/collects (15¢ per sale) but never files</td>
+        </tr>
+        <tr>
+          <td><strong>Payout gate</strong></td>
+          <td>Daily/weekly/monthly after a 2-day delay — but <strong>new accounts' first payouts can take 4–6 weeks</strong> (verification)</td>
+          <td>None of Podia's — money goes straight to your own Stripe/PayPal</td>
+          <td>Daily; US payouts in 2 business days; <strong>first payout held 7–14 days</strong></td>
+          <td>Daily/weekly/monthly via Kajabi Payments; changing your bank account triggers a 7-day hold on all payouts</td>
+        </tr>
+        <tr>
+          <td><strong>The catch</strong></td>
+          <td>The affordable plan is the trap: 7.5% on Starter, certificates gated to Growth, and a 2025 forced migration that tripled some schools' bills</td>
+          <td>5% fee on Mover; courses count toward a 50-product cap; only 100 email subscribers included before add-on costs</td>
+          <td>Entry price just restructured sharply upward (Basic retired, free plan gone); removing Thinkific branding waits for Grow</td>
+          <td>$143/mo before your first sale; your own affiliate program and advanced automations are gated to Growth at $199/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="pricing-tool-by-tool">Pricing, Tool by Tool — With the Real Limits</h2>
+
+  <h3><a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a> — the tax department is the product</h3>
+  <p>
+    Teachable's honest price is not the one in the headline. <strong>Starter is $39/mo ($29 billed yearly) and takes 7.5% of every sale</strong>; the plan most beginners actually need is <strong>Builder at $89/mo ($69 yearly)</strong>, which removes the transaction fee and unlocks running your own affiliate program; <strong>Growth ($189/$139)</strong> adds certificates and removes Teachable branding. There is no free plan — it was retired in the June 2025 restructure — just a 7-day trial. What Teachable sells better than anyone here is the back office: on Teachable Payments it <strong>calculates, collects and remits sales tax and VAT across 45+ markets</strong>, including EU and UK VAT, and the tax is swept out of your account automatically — you never file it. Use your own payment gateway instead and all of that switches off: tax becomes solely your problem.
+  </p>
+  <p>
+    Fine print worth knowing: <strong>new Teachable Payments accounts may wait four to six weeks for their initial payouts</strong> while Stripe completes verification, and payouts are withheld once earnings pass $500 if your tax form is not on file. Teachable Payments also layers "bundle" charges and a 0.7% fee on recurring products on top of base processing, so even the 0% plans are not fee-free per sale. Certificates sit on Growth, not Builder. And the trust issue is real: in mid-2025 Teachable retired its old plans and migrated every school onto the new structure with no grandfathering — long-time users report bills jumping from $119 to $309 a month, which is why so many 2024-vintage Teachable reviews describe a product that no longer exists.
+  </p>
+
+  <h3><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> — the course business in a box, priced like it</h3>
+  <p>
+    Podia is the most complete <em>beginner-shaped</em> platform here: courses, digital downloads, coaching, community, a website with a custom domain, and email marketing in every plan. <strong>Mover is $49/mo ($42 billed yearly)</strong> with a <strong>5% transaction fee</strong>; <strong>Shaker is $99/mo ($84 yearly)</strong> with <strong>0% transaction fees</strong>; Earthquaker is $179/$150. Card processing (2.9% + $0.30, via your own Stripe or PayPal) is on top. Because the money flows through <strong>your own</strong> payment accounts, Podia never holds your revenue — there is no Podia payout threshold, hold or review gate. For courses specifically, the basics are not tier bait: drip scheduling, certificates of completion and quizzes (including open-ended questions) are presented as standard course features, students are unlimited on every plan, and we scored Podia higher here than in our <a href="/blog/best-platforms-to-sell-digital-products">digital product platforms comparison</a>, where a one-off file made its subscription harder to justify. The plan caps are the trade: courses count toward Mover's <strong>50-product cap</strong> (500 videos), and only <strong>100 email subscribers</strong> are included before add-on costs.
+  </p>
+  <p>
+    Fine print worth knowing: Podia is <strong>not</strong> your merchant of record. It automatically collects sales tax at checkout for jurisdictions <strong>you</strong> register in, across 230 jurisdictions — but registering, filing and remitting stay with you. Podia also rebuilt itself in June 2026 around a built-in community and a unified home feed, migrating all accounts that summer; some long-time creators objected loudly to changes imposed with little warning, and the course builder itself remains deliberately simple (two-level lesson structure, no native mobile app). At beginner volumes Mover is not the cheapest row in the cost table below — it starts winning when the course comes with a community and a list attached.
+  </p>
+
+  <h3><a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a> — the real LMS, at a newly real price</h3>
+  <p>
+    Thinkific is the most course-serious tool here: <strong>unlimited courses on every plan</strong>, certificates and quizzes included on the entry plan, your own affiliate tools included on every paid plan, and a proper learning-experience toolkit (communities, live sessions, assignments). The catch is what happened to its pricing. The free plan is <strong>retired</strong>, the old Basic plan was withdrawn for new customers in autumn 2026, and the entry plan is now <strong>Start at $109/mo ($82 billed yearly)</strong> — roughly double the old entry price — with Grow at $219/$164 and Expand at $499/$374 above it. The 30-day trial is the longest here. On <strong>Thinkific Payments</strong>, Thinkific charges <strong>0% transaction fees</strong>; process through your own Stripe instead and a <strong>third-party gateway fee applies — 2% on Start</strong> — plus standard processing either way, and a <strong>0.5% tax-solution fee</strong> on sales where tax is assessed.
+  </p>
+  <p>
+    Fine print worth knowing: Thinkific's tax handling is half a loaf. For sales to US and Canadian students through Thinkific Payments it calculates, collects <strong>and remits</strong> tax automatically; for UK and EU buyers it calculates the VAT and gives you reports, but <strong>you remain responsible for remitting it</strong> — and Thinkific notably never calls itself your merchant of record. Payouts are daily once you are established (US: two business days), but the <strong>first payout is held 7–14 days</strong> for verification. Removing Thinkific's branding waits for Grow, bulk-emailing your learners waits for Grow, and active learners are capped at 10,000 even on Expand. The product is excellent; the beginner maths got much harder in 2026.
+  </p>
+
+  <h3><a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a> — the business platform you grow into, priced like it</h3>
+  <p>
+    Kajabi is the most complete platform in this comparison and it is not close: courses, coaching, communities, funnels, email marketing, automations, a website and payments under one login. It is also priced for people who already have a business. The public pricing page starts at <strong>Basic, $179/mo ($143 billed yearly)</strong>, with Growth at $249/$199 and Pro at $499/$399; there is no free plan, only a 14-day trial. Kajabi charges <strong>0% revenue share on Kajabi Payments</strong> — use your own Stripe in a region where Kajabi Payments exists and a surcharge applies instead (<strong>2% on Basic</strong>). Basic allows <strong>5 products and 2,500 contacts</strong>; the tools a growing course business actually runs on — <strong>your own affiliate program and advanced automations — are gated to Growth</strong>.
+  </p>
+  <p>
+    Fine print worth knowing: Kajabi says it plainly — <strong>"you remain the merchant of record."</strong> Its Kajabi Sales Tax feature (15¢ per transaction) calculates and collects tax at checkout based on jurisdictions you set up, and its help centre states it "does not file or remit sales taxes on your behalf." Payouts through Kajabi Payments can be daily, weekly or monthly, but update your bank account and <strong>all payouts pause for a mandatory 7-day hold</strong>. Kajabi raised prices in January 2026 — its first rise in nearly a decade, applied to existing customers too — and its partner program, once a famous 30% lifetime deal, now pays new partners a tiered 10–20% (the 30% rate survives only for partners grandfathered before March 2025, whatever the old partner page still advertises). None of this makes Kajabi bad. It makes it a <em>second</em> platform: the one you move to when $143 a month is a rounding error, not a bet.
+  </p>
+
+  <h3>The free all-in-one alternative: <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow">Systeme.io</a></h3>
+  <p>
+    If your plan is "a course <strong>and</strong> an email list <strong>and</strong> a funnel <strong>and</strong> a way to sell the next thing", none of the four above bundles that cheaply — you would be stacking a course platform on top of an email tool on top of a funnel tool. Systeme.io's free plan covers selling with <strong>0% platform transaction fees</strong>, plus funnels, one online course (up to 500 students) and email for up to 2,000 contacts in one dashboard. Its course features are thinner than Thinkific's and its community tools thinner than Podia's — that trade is the whole story. Full breakdown in our <a href="/blog/systeme-io-review">Systeme.io review</a>, and once the sales start, our <a href="/blog/best-email-marketing-for-beginners">beginner email marketing comparison</a> covers the list-building half of the stack.
+  </p>
+
+  <h2 id="what-a-year-costs">What a Year Actually Costs (selling a $99 course, ~10 sales a month)</h2>
+  <p>
+    The only honest way to compare a per-sale fee with a subscription: run one scenario through all four. Assumptions: a $99 course selling about 10 copies a month (~$12,000/year, 120 sales), US card payments, plans billed annually, each platform's own checkout where a fee depends on it. Card processing is 2.9% + $0.30 everywhere below — $384 a year that nobody escapes.
+  </p>
+
+  <div class="data-table-wrapper" role="region" aria-label="What a Year Actually Costs" tabindex="0">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Tool &amp; plan</th>
+          <th scope="col">Plan cost / yr</th>
+          <th scope="col">Fees &amp; processing / yr</th>
+          <th scope="col">Total cost / yr</th>
+          <th scope="col">You keep</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a> Builder</td>
+          <td>$828</td>
+          <td>$384</td>
+          <td><strong>$1,212</strong></td>
+          <td>$10,788</td>
+        </tr>
+        <tr>
+          <td><a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a> Start (Thinkific Payments)</td>
+          <td>$984</td>
+          <td>$444</td>
+          <td><strong>≈ $1,428</strong></td>
+          <td>≈ $10,572</td>
+        </tr>
+        <tr>
+          <td><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> Mover</td>
+          <td>$504</td>
+          <td>$984</td>
+          <td><strong>$1,488</strong></td>
+          <td>$10,512</td>
+        </tr>
+        <tr>
+          <td><a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a> Starter</td>
+          <td>$348</td>
+          <td>$1,284</td>
+          <td><strong>$1,632</strong></td>
+          <td>$10,368</td>
+        </tr>
+        <tr>
+          <td><a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a> Basic (Kajabi Payments)</td>
+          <td>$1,716</td>
+          <td>$384</td>
+          <td><strong>$2,100</strong></td>
+          <td>$9,900</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Read the table the way a beginner should: the cheapest <em>sticker</em> (Teachable Starter) is the second-most expensive year, because 7.5% of $12,000 is $900. At $0 in sales the order inverts — Starter costs $348 for the year, Podia Mover $504, Builder $828, Thinkific Start $984 and Kajabi $1,716 for the privilege of waiting. Thinkific's row includes its 0.5% tax-solution fee assuming your students are in taxed regions; Kajabi's excludes its optional 15¢-per-sale tax tool ($18 a year at this volume). And Podia's row buys things the others do not sell at any fee: a community and an email list in the same subscription. Fees are a job description, not a ranking — but run your own expected number through the maths before you pick, because the crossover points (≈ $530/mo in sales for Teachable Builder vs Starter, ≈ $840/mo for Podia Shaker vs Mover) are where the right answer changes.
+  </p>
+
+  <h2 id="pros-and-cons">Pros &amp; Cons</h2>
+
+  <h3><a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a></h3>
+  <section class="pros-cons-section" aria-label="Teachable Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The strongest tax story here: Teachable Payments calculates, collects and remits US sales tax and EU/UK VAT across 45+ markets.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Builder's 0% fee makes it the cheapest year in this comparison at ~$1,000/mo in sales.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Upsells and cart recovery are included even on Starter; student apps for iOS and Android.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Money moves on your chosen schedule (daily/weekly/monthly) once verification is done.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Starter's 7.5% transaction fee makes the entry plan a trap; the honest starting price is $69/mo billed yearly.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>New sellers can wait 4–6 weeks for initial payouts during verification; payouts are held past $500 without a tax form.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The June 2025 forced migration — no grandfathering, bills reportedly tripling for some schools — is the dominant trust complaint in recent reviews.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Certificates wait for Growth ($139/yr-billed); extra percentage "bundle" charges sit on top of processing even on 0% plans.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a></h3>
+  <section class="pros-cons-section" aria-label="Podia Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Courses, community, downloads, coaching, website and email in every plan — nothing essential is tier bait.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Money goes straight to your own Stripe/PayPal — no platform payout threshold, hold or review gate.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Unlimited students on every plan; drip, certificates and quizzes are standard course features.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>14-day free trial, no credit card required.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Mover's 5% transaction fee plus caps (50 products, 100 included email subscribers) push you to Shaker fast.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Sales tax is calculated and collected only where you register; filing and remitting remain your job.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The June 2026 community-first relaunch was imposed on existing creators with little warning; some long-time users left over it.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Course builder is deliberately simple: two-level lessons, multiple-choice-plus-written quizzes, no native mobile app.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a></h3>
+  <section class="pros-cons-section" aria-label="Thinkific Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Unlimited courses on every plan, with certificates, quizzes and graded assignments on the entry plan.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Your own affiliate tools are included on every paid plan — no tier upgrade needed to let others sell for you.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>0% transaction fees on Thinkific Payments; US/CA sales tax collected <em>and remitted</em> automatically.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The longest trial here: 30 days, full platform.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The 2026 restructure retired the free plan and the Basic plan; the entry price roughly doubled to $82/mo billed yearly.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>EU/UK VAT is calculated for you but remitted by you; a 0.5% tax-solution fee applies to taxed sales.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Using your own Stripe instead of Thinkific Payments costs a 2% gateway fee on Start.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Thinkific branding stays on Start; bulk learner email and API access wait for Grow.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3><a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a></h3>
+  <section class="pros-cons-section" aria-label="Kajabi Pros and Cons">
+    <div class="pros-cons-grid">
+      <div class="pc-box pros-box">
+        <div class="pc-header">
+          <span class="pc-icon pros-icon" aria-hidden="true">&#10003;</span>
+          <h4>Pros</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>The most complete business here: courses, community, funnels, email, automations, website and payments in one subscription.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>0% revenue share on Kajabi Payments, with discounted processing rates as you move up plans.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>Polished student experience, including a branded mobile app option.</span>
+          </li>
+          <li>
+            <span class="pc-bullet pro-bullet" aria-hidden="true">+</span>
+            <span>14-day free trial and a 30-day money-back guarantee.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pc-box cons-box">
+        <div class="pc-header">
+          <span class="pc-icon cons-icon" aria-hidden="true">&#10005;</span>
+          <h4>Cons (from real user feedback)</h4>
+        </div>
+        <ul>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>The most expensive beginner year in this comparison ($2,100 at ~$1,000/mo in sales on Basic) — due in full before your first sale.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>Your own affiliate program and advanced automations are gated to Growth at $199/mo billed yearly.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>You are the merchant of record: Kajabi's tax tool calculates and collects but never files or remits for you.</span>
+          </li>
+          <li>
+            <span class="pc-bullet con-bullet" aria-hidden="true">&minus;</span>
+            <span>January 2026 brought the first price rise in nearly a decade, applied to existing customers without grandfathering.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h2 id="who-should-use-each">Who Should (and Shouldn't) Use Each</h2>
+  <p>
+    <strong>Choose <a href={teachableUrl} target="_blank" rel="noopener noreferrer">Teachable</a> if</strong> your students will be international, tax filings frighten you more than fees do, and you will start on Builder ($69/mo billed yearly) rather than Starter. <strong>Skip Teachable if</strong> you plan to live on the $29 plan — at any real volume its 7.5% fee costs more than Builder — or if a 4–6 week wait for your first payout would break your cash flow.
+  </p>
+  <p>
+    <strong>Choose <a href={podiaUrl} target="_blank" rel="noopener noreferrer">Podia</a> if</strong> your course is really a small business — a course plus a community plus an email list — and you want one subscription, your own Stripe payouts, and no feature gates between you and launching. <strong>Skip Podia if</strong> you sell one high-priced course and nothing else: you would be paying for a bundle you never open, and the tax filing is yours.
+  </p>
+  <p>
+    <strong>Choose <a href={thinkificUrl} target="_blank" rel="noopener noreferrer">Thinkific</a> if</strong> the course itself is the product — multiple courses, certificates, structured learning — and you want the LMS features without tier-hopping. <strong>Skip Thinkific if</strong> your buyers are mostly in the EU and you expected VAT to be fully handled, or if $82/mo before your first sale is a stretch; it did not used to cost this much, and it may not stay this price either.
+  </p>
+  <p>
+    <strong>Choose <a href={kajabiUrl} target="_blank" rel="noopener noreferrer">Kajabi</a> if</strong> you are already earning from an audience and Kajabi replaces an email tool, a funnel builder and a course platform you currently pay for separately. <strong>Skip Kajabi if</strong> you are pre-revenue: $143/mo to find out whether anyone wants your course is the most expensive experiment in this comparison.
+  </p>
+
+  <h2 id="faq">FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Is there a free plan anywhere anymore?</h3>
+      <p>
+        No — and that is the real 2026 story of this category. Teachable retired its free plan in 2025, Thinkific retired its free plan and then its Basic plan, and Podia ended its free plan in October 2024. All four now offer trials (7–30 days) and then charge. The genuinely free way to launch a first course is an all-in-one like Systeme.io (see the note above), accepting thinner course features.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Who handles my sales tax and VAT?</h3>
+      <p>
+        Teachable, on Teachable Payments, calculates, collects and remits US sales tax and EU/UK VAT across 45+ markets — the most complete answer here. Thinkific collects and remits for US and Canadian sales only; for the UK and EU it calculates VAT but you remit it. On Podia and Kajabi you are the seller: the platforms calculate and collect in jurisdictions you register in, and filing and remitting are your responsibility. For a beginner selling internationally, this difference is bigger than any fee gap in this article.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Which is actually cheapest in year one?</h3>
+      <p>
+        At roughly $1,000 a month in sales, Teachable Builder ($1,212 all-in) — but only because its fee is 0%; the same company's Starter plan costs $420 <em>more</em> over the year despite a plan price $480 lower. Below roughly $530/mo in sales, Starter's maths flips back; below any sales at all, every subscription here is pure cost, which is why the pre-revenue answer is a free all-in-one or a no-monthly-fee storefront, not a course platform.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>When do I actually get paid?</h3>
+      <p>
+        Podia: immediately into your own Stripe/PayPal, on the processor's normal timing — no Podia gate at all. Thinkific: daily payouts (US: two business days) after a 7–14 day hold on your first payout. Teachable: daily, weekly or monthly after a two-day delay, but new accounts may wait four to six weeks for initial payouts during verification, and payouts pause past $500 in earnings without a tax form. Kajabi: daily, weekly or monthly via Kajabi Payments, with a mandatory 7-day hold on all payouts if you change your bank account.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I switch later without losing my students?</h3>
+      <p>
+        Your student list and course files export from all four. What does not move is the plumbing: drip schedules, quiz settings, payment plans and affiliate setups must be rebuilt, and subscriptions generally have to be recreated. That rebuild cost is exactly what platforms count on when they restructure pricing — all four did so in 2025–26 — so pick the platform whose <em>current</em> deal you would accept again tomorrow.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why do other articles quote completely different prices for these tools?</h3>
+      <p>
+        Because they are quoting 2024. Teachable restructured in June 2025, Kajabi raised prices in January 2026, Podia relaunched in June 2026, and Thinkific raised prices in August 2026 and retired its Basic plan that autumn. Any comparison that lists a Thinkific free plan, a $39 Teachable Basic or a $59 Kajabi starter tier is describing platforms that no longer take new customers. Check the date on the review before the prices in it.
+      </p>
+    </div>
+  </div>
+
+  <h2 id="bottom-line">Bottom Line</h2>
+  <p>
+    For a beginner, the decision is not "which platform is best" but "which bill do you want before you know the course sells." Podia charges a moderate rent and a 5% toll, and hands you a whole small business with no feature gates. Teachable charges the least at real volume and quietly removes the tax problem — as long as you skip its cheapest plan entirely. Thinkific charges a newly serious rent for the most serious course toolset, and still leaves EU VAT in your lap. Kajabi charges the most, removes the most other subscriptions, and makes sense only once there is revenue to consolidate.
+  </p>
+  <p>
+    Start where your first job lives, run the fee maths on your real price before you commit, and let outgrowing your first platform be the good problem it is supposed to be.
+  </p>
+  <p>
+    <a href={systemeAffiliateUrl} target="_blank" rel="sponsored nofollow"><strong>Try Systeme.io free &rarr;</strong></a> — the free all-in-one alternative covered above, if your first job is a course <em>and</em> the list that buys the next one.
+  </p>
+</ArticleLayout>
+
+<style>
+  .verdict-container {
+    margin: 1.5rem 0 2.25rem;
+  }
+
+  .best-for-box {
+    background-color: var(--bg-surface);
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .verdict-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .ribbon-badge {
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .verdict-box-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.15rem;
+  }
+
+  .verdict-ranking-list {
+    list-style: none;
+    padding: 0.9rem 1.1rem;
+    margin: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .verdict-ranking-list li {
+    margin: 0;
+    font-size: 0.96rem;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+
+  .verdict-cta-after {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .verdict-cta-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.98rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .th-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .th-link:hover {
+    color: #A7F3D0;
+  }
+
+  .pros-cons-section {
+    margin: 1rem 0 2rem;
+  }
+
+  .pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .pc-box {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pros-box {
+    border-top: 4px solid var(--accent-emerald);
+  }
+
+  .cons-box {
+    border-top: 4px solid var(--accent-red);
+  }
+
+  .pc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .pc-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .pc-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .pros-icon {
+    background-color: #D1FAE5;
+    color: #065F46;
+  }
+
+  .cons-icon {
+    background-color: #FEE2E2;
+    color: #991B1B;
+  }
+
+  .pc-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc-box li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .pc-box li:last-child {
+    margin-bottom: 0;
+  }
+
+  .pc-bullet {
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  .pro-bullet {
+    color: var(--accent-emerald);
+  }
+
+  .con-bullet {
+    color: var(--accent-red);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
+  }
+
+  .faq-item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-item h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.08rem;
+    color: var(--text-primary);
+  }
+
+  .faq-item p {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+
+  @media (max-width: 680px) {
+    .pros-cons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
